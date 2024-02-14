@@ -130,6 +130,7 @@ img {
 h1 {
     line-height: 60px;
     letter-spacing: 1.12px;
+    font-size: 48px;
 }
 
 h2 {
@@ -192,6 +193,9 @@ p {
     margin-top: 7rem
 }
 
+.mt-8{
+    margin-top: 13rem;
+}
 .mb-6 {
     margin-bottom: 9rem;
 }
@@ -289,6 +293,7 @@ p {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
     cursor: pointer;
     height: 76%;
+    padding: 2.25rem 1.5rem 1.5rem;
 }
 
 .swiper {
@@ -557,9 +562,11 @@ p {
 .footer-logo {
     margin-left: -86px;
 }
-.Trello-img{
+
+.Trello-img {
     padding-left: 2rem;
 }
+
 .footer-section {
     background-color: rgb(23, 43, 77);
 }
@@ -679,9 +686,11 @@ select {
         width: 96%;
         padding-left: 2rem;
     }
-    .border-line{
+
+    .border-line {
         display: none;
     }
+
     .footer-logo {
         margin-left: -97px;
     }
@@ -735,7 +744,9 @@ select {
     .Trello-card h3 {
         font-size: 20px;
     }
-
+    .Trello-card {
+        width: 387px;
+    }
     p {
         font-size: 16px;
     }
@@ -755,5 +766,11 @@ select {
 
     .btn {
         padding: 12px 29px;
+    }
+    .swiper-text h3{
+        font-size: 24px;
+    }
+    .hero h2{
+        font-size: 24px;
     }
 }
