@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.py-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    padding: 9px 24px;
+    background: none;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-nav :hover {
+    color: blue;
+}
+
+.nav-section {
+    left: -34px;
+    right: 0;
+    padding: 12px 32px;
+    z-index: 2;
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: none;
+}
+
+.btn:hover {
+    color: 0;
+    background-color: white;
+    border-color: none;
+}
+
+.btn:first-child:active {
+    color: rgb(23, 43, 77);
+    background-color: white;
+}
+
+.btn-primary {
+    color: rgb(23, 43, 77);
+    background: white;
+}
+
+.btn-primary:focus {
+    color: rgb(23, 43, 77);
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-primary:active:focus {
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    color: rgb(23, 43, 77);
+}
+
+.btn-secondary {
+    background: rgb(0, 101, 255);
+    color: white;
+    border-radius: 0;
+}
+
+.btn-secondary:focus {
+    color: white;
+    background-color: rgb(0, 101, 255);
+    box-shadow: none;
+}
+
+.btn-secondary:active:focus {
+    box-shadow: none;
+    background-color: rgb(0, 101, 255);
+    color: white;
+}
+
+.btn-secondary:hover {
+    color: white;
+    background-color: rgb(7, 71, 166);
+    border-color: rgb(7, 71, 166);
+}
+
+.btn-light {
+    border: 1px solid rgb(0, 101, 255);
+    padding: 0.7rem 1rem 0.8rem;
+    text-decoration: none;
+}
+
+.btn-light:hover {
+    background-color: rgb(222, 235, 255);
+    border-color: rgb(0, 101, 255);
+}
+
+h1 {
+    line-height: 60px;
+    letter-spacing: 1.12px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 34px;
+}
+
+h3 {
+    color: #FFF;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: 0px;
+}
+
+p {
+    color: #F4F4F4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.fs-10 {
+    font-size: 16px;
+}
+
+.fs-11 {
+    color: rgb(80, 95, 121);
+    font-size: 0.75rem;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-24 {
+    font-size: 24px;
+    line-height: 1.33333;
+}
+
+.fs-48 {
+    font-size: 48px;
+}
+
+.mt-6 {
+    margin-top: 10rem;
+}
+
+.mt-7 {
+    margin-top: 7rem
+}
+
+.mb-6 {
+    margin-bottom: 9rem;
+}
+
+.mb-7 {
+    margin-bottom: 11rem
+}
+
+.mb-9 {
+    margin-bottom: -16.75px;
+}
+
+.gap-6 {
+    gap: 15.5rem;
+}
+
+.gap-7 {
+    gap: 6rem;
+}
+
+.hero-section {
+    background: url(/assests/images/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    color: rgb(255, 255, 255);
+}
+
+.form-control {
+    padding: 12px 24px;
+    width: 304px;
+}
+
+.video-container {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text-blue {
+    color: blue;
+    cursor: pointer;
+}
+
+.text-blue:hover {
+    color: rgb(7, 71, 166);
+}
+
+.thumbnail-container {
+    flex: 1;
+}
+
+.thumbnail {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.thumbnail.active {
+    color: rgb(9, 30, 66);
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+    border-radius: 0.3rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.thumbnail.active::after {
+    background-color: rgb(0, 199, 229);
+    border-radius: 0.3rem 0px 0px 0.3rem;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 0.5rem;
+}
+
+.banner-section {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
+    background-blend-mode: normal;
+    color: rgb(9, 30, 66);
+}
+
+.main-slide {
+    flex: 3;
+}
+
+.main-slide img {
+    width: 100%;
+    display: block;
+}
+
+/* swiper slider */
+.swiper-wrapper {
+    margin-top: 40px;
+}
+
+.swiper .content-wrapper .content {
+    border-radius: 0.5rem;
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+    cursor: pointer;
+    height: 76%;
+}
+
+.swiper {
+    margin-left: auto;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+}
+
+.swiper-avatar {
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 8px;
+    width: 3rem;
+    top: 28px;
+}
+
+.bg-color1 {
+    background: rgb(255, 116, 82);
+}
+
+.bg-color2 {
+    background: rgb(38, 132, 255);
+}
+
+.bg-color3 {
+    background: rgb(87, 217, 163);
+}
+
+.bg-color4 {
+    background: rgb(255, 196, 0);
+}
+
+.bg-color5 {
+    background: rgb(0, 199, 229);
+}
+
+.bg-color6 {
+    background: rgb(249, 156, 219);
+}
+
+.swiper-nav-wrapper {
+    right: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    &:after {
+        display: none;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: grey;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: grey;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-color: rgb(244, 245, 247);
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
+}
+
+/* swiper slider End*/
+
+/* Blog-Card */
+.Blog-section {
+    background: url(/assests/images/left-gradient.svg) left center / contain no-repeat scroll padding-box border-box,
+        url(/assests/images/right-gradient.svg) right center / contain no-repeat scroll padding-box border-box,
+        linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
+    background-blend-mode: normal, normal, normal;
+    color: rgb(255, 255, 255);
+}
+
+.container-blog {
+    padding-left: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+    padding: 1.5rem;
+}
+
+.container-blog p {
+    line-height: 1.40;
+}
+
+.btn-blog1 {
+    margin-left: -10px;
+    color: rgb(135, 119, 217);
+    width: 3rem;
+}
+
+.btn-blog2 {
+    margin-left: -10px;
+    width: 3rem;
+    color: rgb(0, 199, 229);
+}
+
+.Blog-card {
+    margin-bottom: -13rem;
+}
+
+/* Blog-Card  End */
+
+/* Card */
+.Trello-card {
+    width: 360px;
+    padding: 1.5rem;
+    background-color: rgb(250, 251, 252);
+    border-radius: 0.5rem;
+}
+
+.Trello-card img {
+    margin-bottom: 24px;
+}
+
+.Trello-card h2 {
+    font-size: 2.25rem;
+    padding-bottom: 1rem;
+    cursor: grab;
+}
+
+/* Card End */
+
+.card-section {
+    padding: 1rem;
+}
+
+.line {
+    background-color: currentcolor;
+    content: "";
+    display: block;
+    height: 1px;
+    max-width: 9rem;
+}
+
+.title {
+    border-radius: 0.5rem;
+    box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+    background-image: url(/assests/images/download.1.svg);
+    background-repeat: no-repeat;
+}
+
+.swiper-text {
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+    padding: 2.5rem 2rem;
+}
+
+.swiper-text h3 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+}
+
+.swiper-text a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-text a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.text {
+    padding: 2rem;
+}
+
+.swiper-nav {
+    top: 0;
+    right: 15px;
+    z-index: 1;
+}
+
+.swiper-pagination {
+    top: 13px;
+    right: -102;
+    z-index: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 3.75rem;
+    opacity: 0.4;
+    background: currentColor;
+    cursor: pointer;
+    height: 8px;
+    border-radius: 2rem;
+    transition: all 0.3s ease 0s;
+}
+
+.rounded-2 h3 {
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+}
+
+.pricing-card {
+    margin: -12px;
+    border: 1px solid rgb(223, 225, 230);
+    padding: 15px;
+}
+
+.pricing-card.active {
+    border: 2px solid rgb(0, 184, 217);
+}
+
+.pricing-card.active .Sign-up-button a:hover {
+    background-color: white;
+}
+
+.user-counter {
+    appearance: textfield;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    color: rgb(9, 30, 66);
+    margin: 0px 0.25rem;
+    width: 4.5rem;
+}
+
+#peakMessage {
+    display: none;
+    margin-top: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+#priceRange {
+    width: 100%;
+}
+
+.Sign-up-button a {
+    border-radius: 0.3rem;
+    border: 1px solid rgb(0, 184, 217);
+    padding: 0.7rem 1rem 0.8rem;
+    color: rgb(23, 43, 77) !important;
+}
+
+.Sign-up-button a:hover {
+    border: 1px solid rgb(0, 184, 217);
+    background-color: rgb(230, 252, 255);
+    border-color: rgb(0, 184, 217);
+    color: rgb(23, 43, 77) !important;
+}
+
+.ford-section {
+    background: url(/assests/images/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(/assests/images/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal, normal;
+    color: rgb(255, 255, 255);
+}
+
+.ford-section h2 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+}
+
+.footer-logo {
+    margin-left: -86px;
+}
+.Trello-img{
+    padding-left: 2rem;
+}
+.footer-section {
+    background-color: rgb(23, 43, 77);
+}
+
+.border-line {
+    border-top: 1px solid rgb(80, 95, 121);
+    width: 100% !important;
+}
+
+.footer-icon a {
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    height: 26px;
+    width: 26px;
+}
+
+select {
+    cursor: pointer;
+}
+
+.bg-section1 {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+}
+
+.bg-section2 {
+    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+}
+
+@media screen and (max-width: 1197.7px) {
+    .py-120 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        border: none;
+    }
+
+    .btn-third {
+        border: 1px solid rgb(0, 101, 255);
+        padding: 0.7rem 1rem 0.8rem;
+    }
+
+    .Trello-card {
+        width: 302px;
+    }
+}
+
+@media screen and (max-width: 991.7px) {
+    h1 {
+        font-size: 2.75rem;
+        line-height: 1.18182;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .fs-22 {
+        font-size: 1.25rem;
+    }
+
+    .btn-third {
+        border: 1px solid rgb(0, 101, 255);
+        padding: 0.7rem 1rem 0.8rem;
+    }
+
+    .thumbnail {
+        display: none;
+    }
+
+    .thumbnail.active {
+        display: block;
+    }
+
+    .ford-section-md {
+        background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+        background-blend-mode: normal;
+        color: rgb(255, 255, 255);
+    }
+
+    .border-line-top {
+        border-top: 1px solid rgb(80, 95, 121);
+        padding: 1rem 0px;
+    }
+
+    .border-line-bottom {
+        border-bottom: 1px solid rgb(80, 95, 121);
+        width: 96%;
+        padding-left: 2rem;
+    }
+    .border-line{
+        display: none;
+    }
+    .footer-logo {
+        margin-left: -97px;
+    }
+}
+
+@media screen and (max-width: 767.97px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 88px;
+    }
+}
+
+@media screen and (max-width: 575.7px) {
+    .py-120 {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .py-20 {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .Trello-card h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .fs-22 {
+        font-size: 20px;
+    }
+
+    .fs-10 {
+        font-size: 16px;
+    }
+
+    .btn-third {
+        border: 1px solid rgb(0, 101, 255);
+        padding: 0.7rem 1rem 0.8rem;
+    }
+
+    .btn {
+        padding: 12px 29px;
+    }
+}
