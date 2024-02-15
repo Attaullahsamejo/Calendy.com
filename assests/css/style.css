@@ -188,23 +188,12 @@ p {
     font-size: 48px;
 }
 
-.mt-6 {
-    margin-top: 10rem;
-}
-
-.mt-7 {
-    margin-top: 7rem
-}
-
-.mt-8{
-    margin-top: 13rem;
-}
 .mb-6 {
-    margin-bottom: 9rem;
+    margin-bottom: 6rem;
 }
 
 .mb-7 {
-    margin-bottom: 11rem
+    margin-bottom: 9rem
 }
 
 .mb-9 {
@@ -507,6 +496,7 @@ p {
     margin: -12px;
     border: 1px solid rgb(223, 225, 230);
     padding: 15px;
+    height: 100%;
 }
 
 .pricing-card.active {
@@ -528,9 +518,9 @@ p {
 
 #peakMessage {
     display: none;
-    margin-top: 10px;
     color: black;
     font-size: 16px;
+    margin-bottom: 18px;
 }
 
 #priceRange {
@@ -650,16 +640,19 @@ select {
     h3 {
         font-size: 1.5rem;
     }
-    .active h3{
+
+    .active h3 {
         font-size: 16px;
     }
 
     p {
         font-size: 16px;
     }
-.container-blog p{
-    font-size: 1.25rem;
-}
+
+    .container-blog p {
+        font-size: 1.25rem;
+    }
+
     .fs-22 {
         font-size: 1.25rem;
     }
@@ -719,7 +712,7 @@ select {
     .btn {
         padding: 12px 88px;
     }
-   
+
 }
 
 @media screen and (max-width: 575.7px) {
@@ -752,9 +745,11 @@ select {
     .Trello-card h3 {
         font-size: 20px;
     }
+
     .Trello-card {
         width: 387px;
     }
+
     p {
         font-size: 16px;
     }
@@ -775,12 +770,15 @@ select {
     .btn {
         padding: 12px 29px;
     }
-    .swiper-text h3{
+
+    .swiper-text h3 {
         font-size: 24px;
     }
-    .hero h2{
+
+    .hero h2 {
         font-size: 24px;
     }
+
     .ford-section h2 {
         font-size: 1.5rem;
     }
