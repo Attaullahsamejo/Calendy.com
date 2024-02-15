@@ -189,7 +189,7 @@ p {
 }
 
 .mb-6 {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
 }
 
 .mb-7 {
@@ -219,6 +219,7 @@ p {
 }
 
 .video-container {
+    cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -493,7 +494,6 @@ p {
 }
 
 .pricing-card {
-    margin: -12px;
     border: 1px solid rgb(223, 225, 230);
     padding: 15px;
 }
@@ -519,7 +519,7 @@ p {
     display: none;
     color: black;
     font-size: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 38px;
 }
 
 #priceRange {
@@ -591,7 +591,7 @@ select {
 
 @media screen and (max-width: 1197.7px) {
     .py-120 {
-        padding-top: 60px;
+        padding-top: 160px;
         padding-bottom: 60px;
     }
 
@@ -615,7 +615,9 @@ select {
     .btn {
         padding: 14px 20px;
     }
-
+    .mt-7{
+        margin-top: 7rem;
+    }
     .btn-third {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
@@ -660,7 +662,9 @@ select {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
     }
-
+    .mt-7{
+        margin-top: 7rem;
+    }
     .thumbnail {
         display: none;
     }
@@ -711,12 +715,12 @@ select {
     .btn {
         padding: 12px 88px;
     }
-
+   
 }
 
 @media screen and (max-width: 575.7px) {
     .py-120 {
-        padding-top: 60px;
+        padding-top: 100px;
         padding-bottom: 40px;
     }
 
@@ -769,7 +773,9 @@ select {
     .btn {
         padding: 12px 29px;
     }
-
+    .mt-7{
+        margin-top: 7rem;
+    }
     .swiper-text h3 {
         font-size: 24px;
     }
