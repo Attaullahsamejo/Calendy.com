@@ -421,19 +421,13 @@ p {
 
 /* Card End */
 
-.card-section {
-    padding: 1rem;
-}
-
-.line {
+.border-center {
     background-color: currentcolor;
-    content: "";
-    display: block;
     height: 1px;
     max-width: 9rem;
 }
 
-.title {
+.surveyCard {
     border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
     background-image: url(/assests/images/download.1.svg);
@@ -460,14 +454,12 @@ p {
 }
 
 .swiper-nav {
-    top: 0;
     right: 15px;
     z-index: 1;
 }
 
 .swiper-pagination {
     top: 13px;
-    right: -102;
     z-index: 1;
 }
 
@@ -543,10 +535,6 @@ p {
     margin-left: -86px;
 }
 
-.Trello-img {
-    padding-left: 2rem;
-}
-
 .footer-section {
     background-color: rgb(23, 43, 77);
 }
@@ -561,10 +549,6 @@ p {
     border: 2px solid rgb(255, 255, 255);
     height: 26px;
     width: 26px;
-}
-
-select {
-    cursor: pointer;
 }
 
 .bg-section1 {
@@ -600,15 +584,15 @@ select {
         font-size: 16px;
     }
 
-    .btn {
-        padding: 14px 20px;
-    }
-
     .mt-7 {
         margin-top: 7rem;
     }
 
-    .btn-third {
+    .btn {
+        padding: 14px 20px;
+    }
+
+    .btn-light {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
     }
@@ -632,11 +616,19 @@ select {
         font-size: 1.5rem;
     }
 
-    .active h3 {
+    p {
         font-size: 16px;
     }
 
-    p {
+    .mt-7 {
+        margin-top: 7rem;
+    }
+
+    .fs-22 {
+        font-size: 1.25rem;
+    }
+
+    .active h3 {
         font-size: 16px;
     }
 
@@ -644,17 +636,9 @@ select {
         font-size: 1.25rem;
     }
 
-    .fs-22 {
-        font-size: 1.25rem;
-    }
-
-    .btn-third {
+    .btn-light {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
-    }
-
-    .mt-7 {
-        margin-top: 7rem;
     }
 
     .thumbnail {
@@ -733,18 +717,6 @@ select {
         font-size: 16px;
     }
 
-    .content h3 {
-        font-size: 20px;
-    }
-
-    .Trello-card h3 {
-        font-size: 20px;
-    }
-
-    .Trello-card {
-        width: 387px;
-    }
-
     p {
         font-size: 16px;
     }
@@ -757,17 +729,16 @@ select {
         font-size: 16px;
     }
 
-    .btn-third {
-        border: 1px solid rgb(0, 101, 255);
-        padding: 0.7rem 1rem 0.8rem;
-    }
-
-    .btn {
-        padding: 12px 29px;
-    }
-
     .mt-7 {
         margin-top: 7rem;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .Trello-card h3 {
+        font-size: 20px;
     }
 
     .swiper-text h3 {
@@ -781,4 +752,22 @@ select {
     .ford-section h2 {
         font-size: 1.5rem;
     }
+
+    .Trello-card {
+        width: 387px;
+    }
+
+    .btn {
+        padding: 12px 29px;
+    }
+
+    .btn-light {
+        border: 1px solid rgb(0, 101, 255);
+        padding: 0.7rem 1rem 0.8rem;
+    }
+
+
+
+
+
 }
