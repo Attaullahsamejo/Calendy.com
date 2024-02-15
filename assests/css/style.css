@@ -58,7 +58,6 @@ img {
 
 .btn {
     padding: 14px 24px;
-    border: none;
 }
 
 .btn:hover {
@@ -375,24 +374,21 @@ p {
 }
 
 .container-blog {
-    padding-left: 2px;
-    background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
-    padding: 1.5rem;
 }
 
 .container-blog p {
     line-height: 1.40;
 }
 
-.btn-blog1 {
+.blogIcon-1 {
     margin-left: -10px;
     color: rgb(135, 119, 217);
     width: 3rem;
 }
 
-.btn-blog2 {
+.blogIcon-2 {
     margin-left: -10px;
     width: 3rem;
     color: rgb(0, 199, 229);
