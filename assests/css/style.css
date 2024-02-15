@@ -211,7 +211,7 @@ p {
 .gap-7 {
     gap: 6rem;
 }
-
+/* hero-section */
 .hero-section {
     background: url(/assests/images/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
     color: rgb(255, 255, 255);
@@ -235,7 +235,9 @@ p {
 .text-blue:hover {
     color: rgb(7, 71, 166);
 }
+/* hero-section */
 
+/* Thumbnails-Container */
 .thumbnail-container {
     flex: 1;
 }
@@ -279,6 +281,7 @@ p {
     width: 100%;
     display: block;
 }
+/* Thumbnails-Container */
 
 /* swiper slider */
 .swiper-wrapper {
@@ -362,7 +365,6 @@ p {
     border-radius: 50%;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
 }
-
 /* swiper slider End*/
 
 /* Blog-Card */
@@ -401,7 +403,8 @@ p {
 
 /* Blog-Card  End */
 
-/* Card */
+/* Cards */
+
 .Trello-card {
     width: 360px;
     padding: 1.5rem;
@@ -419,8 +422,9 @@ p {
     cursor: grab;
 }
 
-/* Card End */
+/* Cards End */
 
+/* surveyCard-Container */
 .border-center {
     background-color: currentcolor;
     height: 1px;
@@ -472,7 +476,9 @@ p {
     border-radius: 2rem;
     transition: all 0.3s ease 0s;
 }
+/* surveyCard-Container End*/
 
+/* pricing cards-Container */
 .pricing-card {
     border: 1px solid rgb(223, 225, 230);
     padding: 15px;
@@ -519,6 +525,7 @@ p {
     border-color: rgb(0, 184, 217);
     color: rgb(23, 43, 77) !important;
 }
+/* pricing cards-Container End*/
 
 .ford-section {
     background: url(/assests/images/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(/assests/images/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
@@ -531,14 +538,13 @@ p {
     line-height: 1.33333;
 }
 
-.footer-logo {
-    margin-left: -86px;
-}
-
+/* footer-section */
 .footer-section {
     background-color: rgb(23, 43, 77);
 }
-
+.footer-logo {
+    margin-left: -86px;
+}
 .border-line {
     border-top: 1px solid rgb(80, 95, 121);
     width: 100% !important;
@@ -560,6 +566,7 @@ p {
     background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
     background-blend-mode: normal;
 }
+/* footer-section End*/
 
 @media screen and (max-width: 1197.7px) {
     .py-120 {
