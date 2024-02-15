@@ -211,6 +211,7 @@ p {
 .gap-7 {
     gap: 6rem;
 }
+
 /* hero-section */
 .hero-section {
     background: url(/assests/images/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
@@ -235,6 +236,7 @@ p {
 .text-blue:hover {
     color: rgb(7, 71, 166);
 }
+
 /* hero-section */
 
 /* Thumbnails-Container */
@@ -281,6 +283,7 @@ p {
     width: 100%;
     display: block;
 }
+
 /* Thumbnails-Container */
 
 /* swiper slider */
@@ -365,6 +368,7 @@ p {
     border-radius: 50%;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
 }
+
 /* swiper slider End*/
 
 /* Blog-Card */
@@ -425,12 +429,6 @@ p {
 /* Cards End */
 
 /* surveyCard-Container */
-.border-center {
-    background-color: currentcolor;
-    height: 1px;
-    max-width: 9rem;
-}
-
 .surveyCard {
     border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
@@ -442,6 +440,12 @@ p {
     background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
     box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
     padding: 2.5rem 2rem;
+}
+
+.border-center {
+    background-color: currentcolor;
+    height: 1px;
+    max-width: 9rem;
 }
 
 .swiper-text h3 {
@@ -476,6 +480,7 @@ p {
     border-radius: 2rem;
     transition: all 0.3s ease 0s;
 }
+
 /* surveyCard-Container End*/
 
 /* pricing cards-Container */
@@ -486,6 +491,9 @@ p {
 
 .pricing-card.active {
     border: 2px solid rgb(0, 184, 217);
+}
+.pricing-card.active .Sign-up-button a{
+    background-color: rgb(230, 252, 255);
 }
 
 .pricing-card.active .Sign-up-button a:hover {
@@ -525,6 +533,7 @@ p {
     border-color: rgb(0, 184, 217);
     color: rgb(23, 43, 77) !important;
 }
+
 /* pricing cards-Container End*/
 
 .ford-section {
@@ -542,9 +551,11 @@ p {
 .footer-section {
     background-color: rgb(23, 43, 77);
 }
+
 .footer-logo {
     margin-left: -86px;
 }
+
 .border-line {
     border-top: 1px solid rgb(80, 95, 121);
     width: 100% !important;
@@ -566,6 +577,7 @@ p {
     background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
     background-blend-mode: normal;
 }
+
 /* footer-section End*/
 
 @media screen and (max-width: 1197.7px) {
