@@ -58,6 +58,7 @@ img {
 
 .btn {
     padding: 14px 24px;
+    border: none;
 }
 
 .btn:hover {
