@@ -149,6 +149,10 @@ h3 {
     margin-bottom: 0;
 }
 
+.hero h2 {
+    font-size: 2.25rem;
+}
+
 p {
     color: #F4F4F4;
     font-size: 16px;
@@ -181,7 +185,6 @@ p {
 
 .fs-24 {
     font-size: 24px;
-    line-height: 1.33333;
 }
 
 .fs-48 {
@@ -458,10 +461,6 @@ p {
     color: rgb(255, 255, 255);
 }
 
-.text {
-    padding: 2rem;
-}
-
 .swiper-nav {
     top: 0;
     right: 15px;
@@ -482,15 +481,6 @@ p {
     height: 8px;
     border-radius: 2rem;
     transition: all 0.3s ease 0s;
-}
-
-.rounded-2 h3 {
-    line-height: 1.2;
-}
-
-.hero h2 {
-    font-size: 2.25rem;
-    line-height: 1.33333;
 }
 
 .pricing-card {
@@ -615,9 +605,11 @@ select {
     .btn {
         padding: 14px 20px;
     }
-    .mt-7{
+
+    .mt-7 {
         margin-top: 7rem;
     }
+
     .btn-third {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
@@ -662,9 +654,11 @@ select {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
     }
-    .mt-7{
+
+    .mt-7 {
         margin-top: 7rem;
     }
+
     .thumbnail {
         display: none;
     }
@@ -715,7 +709,7 @@ select {
     .btn {
         padding: 12px 88px;
     }
-   
+
 }
 
 @media screen and (max-width: 575.7px) {
@@ -773,9 +767,11 @@ select {
     .btn {
         padding: 12px 29px;
     }
-    .mt-7{
+
+    .mt-7 {
         margin-top: 7rem;
     }
+
     .swiper-text h3 {
         font-size: 24px;
     }
