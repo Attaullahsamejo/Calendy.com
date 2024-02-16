@@ -143,6 +143,7 @@ h3 {
     line-height: 24px;
     font-weight: 500;
 }
+
 h4 {
     font-size: 16px;
     line-height: 24px;
@@ -178,11 +179,11 @@ p {
 
 .fs-24 {
     font-size: 24px;
-} 
+}
 
- .fs-48 {
+.fs-48 {
     font-size: 48px;
-} 
+}
 
 .mb-9 {
     margin-bottom: -16.75px;
@@ -264,6 +265,10 @@ p {
     border-width: 8px;
     width: 3rem;
     top: 28px;
+}
+
+.ps-6 {
+    padding-left: 8rem;
 }
 
 .bg-color1 {
@@ -423,7 +428,8 @@ p {
 .pricing-card.active {
     border: 2px solid rgb(0, 184, 217);
 }
-.pricing-card.active .Sign-up-button a{
+
+.pricing-card.active .Sign-up-button a {
     background-color: rgb(230, 252, 255);
 }
 
@@ -485,6 +491,11 @@ p {
     margin-left: -86px;
 }
 
+.footer-text :hover {
+    background-color: rgb(52, 69, 99);
+    cursor: pointer;
+}
+
 .border-line {
     border-top: 1px solid rgb(80, 95, 121);
 }
@@ -531,10 +542,6 @@ p {
         font-size: 16px;
     }
 
-    .mt-7 {
-        margin-top: 7rem;
-    }
-
     .btn {
         padding: 14px 20px;
     }
@@ -546,6 +553,10 @@ p {
 
     .Trello-card {
         width: 302px;
+    }
+
+    .ps-6 {
+        padding-left: 4rem;
     }
 }
 
@@ -567,25 +578,17 @@ p {
         font-size: 16px;
     }
 
-    .mt-7 {
-        margin-top: 7rem;
-    }
-
-    .fs-22 {
-        font-size: 1.25rem;
-    }
-
     .active h3 {
         font-size: 16px;
-    }
-
-    .container-blog p {
-        font-size: 1.25rem;
     }
 
     .btn-light {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
+    }
+
+    .ps-6 {
+        padding-left: 3rem;
     }
 
     .thumbnail {
@@ -599,7 +602,6 @@ p {
     .ford-section-md {
         background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
         background-blend-mode: normal;
-        color: rgb(255, 255, 255);
     }
 
     .border-line-top {
@@ -668,16 +670,8 @@ p {
         font-size: 16px;
     }
 
-    .fs-22 {
-        font-size: 20px;
-    }
-
-    .fs-10 {
-        font-size: 16px;
-    }
-
-    .mt-7 {
-        margin-top: 7rem;
+    .ps-6 {
+        padding-left: 2rem;
     }
 
     .content h3 {
