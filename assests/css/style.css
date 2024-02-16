@@ -191,7 +191,6 @@ p {
 /* hero-section */
 .hero-section {
     background: url(/assests/images/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
-    color: rgb(255, 255, 255);
 }
 
 .form-control {
@@ -227,7 +226,6 @@ p {
 
 .thumbnail.active {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
-    border-radius: 0.3rem;
     padding: 1rem 1rem 1rem 1.5rem;
 }
 
@@ -251,34 +249,17 @@ p {
     flex: 3;
 }
 
-.main-slide img {
-    width: 100%;
-    display: block;
-}
-
-/* Thumbnails-Container */
+/* Thumbnails-Container End*/
 
 /* swiper slider */
-.swiper-wrapper {
-    margin-top: 40px;
-}
-
 .swiper .content-wrapper .content {
-    border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
     cursor: pointer;
     height: 63%;
     padding: 2.25rem 1.5rem 1.5rem;
 }
 
-.swiper {
-    margin-left: auto;
-    padding-left: 0.5rem;
-    padding-right: 1rem;
-}
-
 .swiper-avatar {
-    border-radius: 0.5rem;
     border-style: solid;
     border-width: 8px;
     width: 3rem;
@@ -349,22 +330,18 @@ p {
         url(/assests/images/right-gradient.svg) right center / contain no-repeat scroll padding-box border-box,
         linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
     background-blend-mode: normal, normal, normal;
-    color: rgb(255, 255, 255);
 }
 
 .container-blog {
-    border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 }
 
 .blogIcon-1 {
-    margin-left: -10px;
     color: rgb(135, 119, 217);
     width: 3rem;
 }
 
 .blogIcon-2 {
-    margin-left: -10px;
     width: 3rem;
     color: rgb(0, 199, 229);
 }
@@ -379,26 +356,13 @@ p {
 
 .Trello-card {
     width: 360px;
-    padding: 1.5rem;
     background-color: rgb(250, 251, 252);
-    border-radius: 0.5rem;
-}
-
-.Trello-card img {
-    margin-bottom: 24px;
-}
-
-.Trello-card h2 {
-    font-size: 2.25rem;
-    padding-bottom: 1rem;
-    cursor: grab;
 }
 
 /* Cards End */
 
 /* surveyCard-Container */
 .surveyCard {
-    border-radius: 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
     background-image: url(/assests/images/download.1.svg);
     background-repeat: no-repeat;
@@ -488,7 +452,6 @@ p {
 }
 
 .Sign-up-button a {
-    border-radius: 0.3rem;
     border: 1px solid rgb(0, 184, 217);
     padding: 0.7rem 1rem 0.8rem;
     color: rgb(23, 43, 77) !important;
@@ -506,7 +469,6 @@ p {
 .ford-section {
     background: url(/assests/images/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(/assests/images/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
     background-blend-mode: normal, normal, normal;
-    color: rgb(255, 255, 255);
 }
 
 .ford-section h2 {
@@ -525,7 +487,6 @@ p {
 
 .border-line {
     border-top: 1px solid rgb(80, 95, 121);
-    width: 100% !important;
 }
 
 .footer-icon a {
