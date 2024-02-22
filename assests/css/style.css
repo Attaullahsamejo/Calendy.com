@@ -222,12 +222,10 @@ p {
 
 .thumbnail {
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .thumbnail.active {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
-    padding: 1rem 1rem 1rem 1.5rem;
 }
 
 .thumbnail.active::after {
@@ -254,7 +252,6 @@ p {
 
 /* swiper slider */
 .swiper .content-wrapper .content {
-    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
     cursor: pointer;
     height: 63%;
     padding: 2.25rem 1.5rem 1.5rem;
@@ -306,16 +303,6 @@ p {
     }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: grey;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
-}
-
 .swiper-button-prev,
 .swiper-button-next {
     color: grey;
@@ -337,7 +324,7 @@ p {
     background-blend-mode: normal, normal, normal;
 }
 
-.container-blog {
+.box-shadow {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 }
 
@@ -548,15 +535,10 @@ p {
 
     .btn-light {
         border: 1px solid rgb(0, 101, 255);
-        padding: 0.7rem 1rem 0.8rem;
     }
 
     .Trello-card {
         width: 302px;
-    }
-
-    .ps-6 {
-        padding-left: 4rem;
     }
 }
 
@@ -585,10 +567,6 @@ p {
     .btn-light {
         border: 1px solid rgb(0, 101, 255);
         padding: 0.7rem 1rem 0.8rem;
-    }
-
-    .ps-6 {
-        padding-left: 3rem;
     }
 
     .thumbnail {
@@ -670,7 +648,7 @@ p {
         font-size: 16px;
     }
 
-    .ps-6 {
+    .ps-5 {
         padding-left: 2rem;
     }
 
