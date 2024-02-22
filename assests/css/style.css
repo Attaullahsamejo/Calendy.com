@@ -313,7 +313,6 @@ p {
     border-radius: 50%;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15)
 }
-
 /* swiper slider End*/
 
 /* Blog-Card */
@@ -341,11 +340,9 @@ p {
 .Blog-card {
     margin-bottom: -13rem;
 }
-
 /* Blog-Card  End */
 
 /* Cards */
-
 .Trello-card {
     width: 360px;
     background-color: rgb(250, 251, 252);
@@ -503,7 +500,6 @@ p {
     background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
     background-blend-mode: normal;
 }
-
 /* footer-section End*/
 
 @media screen and (max-width: 1197.7px) {
