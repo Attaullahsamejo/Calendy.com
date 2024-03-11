@@ -4,1120 +4,1654 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trello</title>
+  <title>Website</title>
   <link rel="icon" type="image/x-icon" href="assests/images/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" href="assests/css/swiper.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.css">
   <link rel="stylesheet" href="assests/css/style.css">
 </head>
 
 <body>
-
-  <div class=" nav-section position-fixed top-0 bg-white pe-0 py-0 nav-bar-scroll">
-    <section class="container-fluid mx-auto">
+  <!-- Navbar Section started -->
+  <div class=" nav-section position-fixed bg-white nav-bar-scroll">
+    <section class="container">
       <div class="row">
-        <div class="col-12  pe-0">
-          <nav class="navbar py-0 navbar-expand-lg " data-navbar-on-scroll="data-navbar-on-scroll">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <svg aria-label="Atlassian Trello" height="37.5" role="img" viewBox="0 0 312 105"
-                  width="111.42857142857143" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" class="Logo-sc-1anfgcw-0 gguOta">
-                  <linearGradient id="trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH" x1="49.992%" x2="49.992%"
-                    y1="100%" y2=".016%">
-                    <stop offset="0" stop-color="#0052cc"></stop>
-                    <stop offset="1" stop-color="#2684ff"></stop>
-                  </linearGradient>
-                  <path
-                    d="m55.3 40.6h-47.5c-4.1 0-7.4 3.3-7.4 7.4v47.6c0 4.1 3.3 7.4 7.4 7.4h47.5c4.1 0 7.4-3.3 7.4-7.4v-47.6c0-4.1-3.3-7.4-7.4-7.4zm-28.1 44.9c0 1.4-1.1 2.5-2.5 2.5h-10.4c-1.4 0-2.5-1.1-2.5-2.5v-30.9c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5zm24-14.2c0 1.4-1.1 2.5-2.4 2.5h-10.5c-1.4 0-2.5-1.1-2.5-2.5v-16.7c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5z"
-                    fill="url(#trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH)"></path>
-                  <g fill="#253858" transform="translate(87 40)">
-                    <path d="m42.6 5.2v12.1h-14.3v45.7h-13.8v-45.8h-14.3v-12z"></path>
-                    <path d="m60.2 63h-12.7v-45h12.7v8.6c2.4-6.1 6.3-9.7 13.2-9.2v13.3c-9-.7-13.2 1.5-13.2 8.7z"></path>
-                    <path
-                      d="m143 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
-                    </path>
-                    <path
-                      d="m169.8 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
-                    </path>
-                    <path
-                      d="m181 40.5c0-13.9 8-23.4 21.8-23.4s21.6 9.5 21.6 23.4-7.9 23.6-21.6 23.6-21.8-9.8-21.8-23.6zm12.5 0c0 6.8 2.8 12.1 9.3 12.1s9.1-5.4 9.1-12.1-2.8-12-9.1-12-9.3 5.2-9.3 12z">
-                    </path>
-                    <path
-                      d="m90.6 44.6c3.6.4 7.2.6 10.7.6 9.8 0 18-2.6 18-12.1 0-9.2-8.5-16.1-18.7-16.1-13.7 0-22.5 10-22.5 23.8 0 14.4 7.6 23 24.7 23 5.1.1 10.1-.8 14.9-2.6v-10.8c-4.4 1.4-9.4 2.8-14.4 2.8-6.8.1-11.5-2.2-12.7-8.6zm9.8-17.7c3.6 0 6.5 2.4 6.5 5.8 0 4.3-4.6 5.7-9.8 5.7-2.2 0-4.5-.2-6.7-.5.2-2.1.8-4.1 1.8-6 1.6-3.1 4.8-5 8.2-5z">
-                    </path>
-                  </g>
-                  <g fill="#0052cc" transform="translate(94)">
-                    <path
-                      d="m98.9 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3.1-1.8 2.4.1 4.8.7 7 1.8v-5c-2.1-1-4.5-1.5-6.8-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.4 0 8.1-2.7 8.1-6.8z">
-                    </path>
-                    <path d="m159.3 1.2v22h4.7v-16.8l2 4.4 6.6 12.3h5.9v-22h-4.7v14.2l-1.8-4.1-5.3-10.1h-7.4z"></path>
-                    <path d="m129.6 1.2h-5.1v22h5.1z"></path>
-                    <path d="m43.2 1.2v22h10.5l1.6-4.8h-7v-17.2z"></path>
-                    <path d="m22.4 1.2v4.8h5.7v17.2h5.1v-17.2h6.1v-4.8z"></path>
-                    <path
-                      d="m15 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m71.7 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.3 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.9.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m148 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m119.2 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3-1.8 2.4.1 4.8.7 7 1.8v-5c-2.2-1-4.5-1.5-6.9-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.7 0 8.3-2.7 8.3-6.8z">
-                    </path>
-                  </g>
-                </svg> </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg d-flex justify-content-between"
+            data-navbar-on-scroll="data-navbar-on-scroll">
+
+            <a class="navbar-brand me-0" href="/">
+              <img src="assests/images/calendy-img.svg" alt="" class="w-50 ">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse align-items-center justify-content-between navbar-collapse"
+              id="navbarSupportedContent">
+              <ul class="navbar-nav  gap-2 mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class="dropbtn border-0 py-2" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Product</button>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class="dropbtn border-0 py-2 dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</button>
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content text-decoration-none position-absolute">
+                      <a href class="text-decoration-none text-black bg-white">Link 1</a>
+                      <a href class="text-decoration-none text-black bg-white">Link 2</a>
+                      <a href class="text-decoration-none text-black bg-white">Link 3</a>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content text-decoration-none position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class="dropbtn border-0 py-2" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Plans</button>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class="dropbtn border-0 py-2" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Pricing</button>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class="dropbtn border-0 py-2 dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</button>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content position-absolute">
+                      <a href class="text-decoration-none text-black bg-white">Link 1</a>
+                      <a href class="text-decoration-none text-black bg-white">Link 2</a>
+                      <a href class="text-decoration-none text-black bg-white">Link 3</a>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plans</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute ">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Pricing</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="d-flex gap-3 align-items-center">
                 <a href="#">
-                  <button class="btn btn-primary ">Login</button>
+                  <button class="border-0 bg-white p-2 fs-16">Login</button>
                 </a>
                 <a href="#">
-                  <button class="btn btn-secondary">Get Trello for free</button>
+                  <button class="btn btn-primary rounded-2">Get started</button>
                 </a>
               </div>
             </div>
           </nav>
         </div>
       </div>
+
     </section>
   </div>
+  <!-- Navbar Section Ended -->
 
-  <!-- hero-section -->
-  <section class="hero-section color-white">
+
+  <!-- hero-section start -->
+  <div class="container py-120 ">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 text-center position-relative">
+        <!-- Add images to the corners -->
+        <img src="assests/images/man-image.jpg" class="corner-image top-left d-lg-block d-none">
+        <img src="assests/images/man-image.jpg" class="corner-image top-right d-lg-block d-none">
+        <img src="assests/images/man-image.jpg" class="corner-image bottom-left d-lg-block d-none">
+        <img src="assests/images/man-image.jpg" class="corner-image bottom-right d-lg-block d-none">
+        <div>
+          <h1 class="text-center fw-bold pb-4">Easy scheduling ahead</h1>
+        </div>
+        <div>
+          <p class="text-center pb-4 fw-normal">Calendy is your scheduling automation platform for eliminating the
+            back-and-forth
+            emails to find the perfect time-and so much more</p>
+          <p class="text-center mb-3 fs-9">Sign up free with Google or Microsoft</p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3 ">
+          <button class="btn btn-primary d-flex gap-2 align-items-center">
+            <svg class="bg-white rounded-2" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none"
+              viewBox="0 0 40 41">
+              <rect width="40" height="40" y="0.5" fill="#fff" rx="4"></rect>
+              <g clip-path="url(#googleLogo_svg__a)">
+                <path fill="#4285F4"
+                  d="M31.766 20.776c0-.815-.066-1.635-.207-2.438H20.24v4.621h6.482a5.554 5.554 0 0 1-2.399 3.647v2.998h3.867c2.271-2.09 3.576-5.177 3.576-8.828Z">
+                </path>
+                <path fill="#34A853"
+                  d="M20.24 32.5c3.237 0 5.966-1.062 7.955-2.896l-3.867-2.998c-1.076.731-2.465 1.146-4.084 1.146-3.13 0-5.784-2.112-6.737-4.952h-3.99v3.091a12.002 12.002 0 0 0 10.723 6.61Z">
+                </path>
+                <path fill="#FBBC04"
+                  d="M13.503 22.8a7.187 7.187 0 0 1 0-4.594v-3.091H9.517a12.01 12.01 0 0 0 0 10.776l3.986-3.09Z"></path>
+                <path fill="#EA4335"
+                  d="M20.24 13.25a6.52 6.52 0 0 1 4.603 1.799l3.427-3.426A11.533 11.533 0 0 0 20.24 8.5a11.998 11.998 0 0 0-10.723 6.614l3.986 3.09c.948-2.843 3.607-4.955 6.737-4.955Z">
+                </path>
+              </g>
+              <defs>
+                <clipPath id="googleLogo_svg__a">
+                  <path fill="#fff" d="M8 8.5h24v24H8z"></path>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="text-white fw-medium fs-10">Sign up with Google</p>
+          </button>
+
+          <button class="btn btn-success d-flex gap-2 align-items-center">
+            <svg class="bg-white rounded-2" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none"
+              viewBox="0 0 40 41">
+              <rect width="40" height="40" y="0.5" fill="#fff" rx="4"></rect>
+              <path fill="#FEBA08" d="M21.023 21.523H31.25V31.75H21.023z"></path>
+              <path fill="#05A6F0" d="M8.75 21.523h10.227V31.75H8.75z"></path>
+              <path fill="#80BC06" d="M21.023 9.25H31.25v10.227H21.023z"></path>
+              <path fill="#F25325" d="M8.75 9.25h10.227v10.227H8.75z"></path>
+            </svg>
+            <p class="text-white fw-medium fs-10">Sign up with Microsoft</p>
+          </button>
+        </div>
+        <span class="or-text position-relative">OR</span>
+        <p class="fs-9"><span class="text-blue fw-medium fs-9">Sign up free with emails.</span> No credit card required
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- hero-section end -->
+
+  <!-- card-section-start -->
+  <div class="section-1 ">
     <div class="container py-120">
-      <div class="row align-items-center ">
-        <div class="col-12 col-lg-6 mb-4 ">
-          <h1 class="mb-4 fw-medium text-center text-white text-lg-start">Trello brings all your tasks, teammates, and
-            tools
-            together</h1>
-          <p class="mb-4 fs-22 text-center text-lg-start">Invest in a Keep everything in the same place—even if your
-            team isn’t.</p>
-          <div class="d-flex flex-wrap mb-4 gap-3 justify-content-center justify-content-lg-start">
-            <form>
-              <div class="form-group mb-2">
-                <input type="email" class="form-control fw-normal" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="Email">
-              </div>
-            </form>
-            <button class="btn btn-secondary d-flex rounded-2  fw-normal mb-3 border-0 hero-button">Sign up-it's
-              free!</button>
-          </div>
-          <div class="video-container text-decoration-underline">
-            <div class="play-button d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
-              <span>Watch Video</span>
-              <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="m5 5h14v14h-14z">
-                </path>
-                <path clip-rule="evenodd"
-                  d="m10.0138 16.3878c-.83597.4912-1.5138.105-1.5138-.8645v-7.04491c0-.97008.6755-1.358 1.5138-.86566l6.465 3.79747c.5548.3261.5589.8517 0 1.1801z"
-                  fill="currentColor" fill-rule="evenodd">
-                </path>
-                <circle cx="12" cy="12" r="11.5" stroke="currentColor"></circle>
-              </svg>
+      <div class="row justify-content-center ">
+        <div class="col-10 col-md-6 col-xl-5 mb-2">
+          <div class="card mb-3  rounded-4 h-100">
+            <div class="card-header1 border-x py-2">
             </div>
+            <div class="card-body p-3">
+              <h2 class="text-start fw-semibold mb-3 fs-9">Talk with customer success</h2>
+              <div class="d-flex align-items-center gap-3 mb-5">
+                <img src="assests/images/Rectangle 256.png" alt="Image 1">
+                <p class="fs-16">1 hour,Round Robin</p>
+              </div>
+              <button class="btn btn-primary">
+                <p class="text-white fw-medium fs-10">Book now</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-6 col-xl-5 mb-2">
+          <div class="card mb-3 rounded-4 h-100">
+            <div class="card-header2 border-x py-2">
+            </div>
+            <div class="card-body p-3">
+              <h2 class="text-start fw-semibold mb-3">Introductory Call</h2>
+              <div class="d-flex gap-3 align-items-center mb-5">
+                <img src="assests/images/Rectangle 256.png" alt="Image 2">
+                <p class="fs-16">15 mins, One-on-One</p>
+              </div>
+              <button class="btn btn-primary">
+                <p class="text-white fw-medium fs-10">Book now</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-6 col-xl-5 mb-2">
+          <div class="card mb-3 rounded-4 h-100">
+            <div class="card-header3 border-x py-2">
+            </div>
+            <div class="card-body p-3">
+              <h2 class="text-start fw-semibold mb-3">Sales Demo</h2>
+              <div class="d-flex gap-3 align-items-center mb-5">
+                <img src="assests/images/Rectangle 256.png" alt="Image 1">
+                <p class="fs-16">30 mins, Collective</p>
+              </div>
+              <button class="btn btn-primary">
+                <p class="text-white fw-medium fs-10">Book now</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-6 col-xl-5 mb-2">
+          <div class="card mb-3 rounded-4 h-100">
+            <div class="card-header4 border-x py-2">
+            </div>
+            <div class="card-body p-3">
+              <h2 class="text-start fw-semibold mb-3">Interview</h2>
+              <div class="d-flex gap-3 align-items-center mb-5">
+                <img src="assests/images/Rectangle 256.png" alt="Image 1">
+                <p class="fs-16">30 mins, 1:1</p>
+              </div>
+              <button class="btn btn-primary">
+                <p class="text-white fw-medium fs-10">Book now</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- card-section-end -->
+
+  <!-- marque-section-start -->
+  <div class="container-fluid container-body py-120 ">
+    <div class="row">
+      <h2 class="text-center mb-4">Simplified scheduling for more than <span class="fw-bold">20 million</span> user
+        world
+        wide</h2>
+      <div class="marquee d-flex gap-4 overflow-hidden">
+        <div class="marquee_group d-flex align-items-center justify-content-between gap-4">
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/DOORDASH-logo.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img
+              src="assests/images/COMPASS_LOGO_MASTER_L.png" alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/LOREAL.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Zendesk.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Lyft-Logo.wine.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/AnyDesk.png"
+              alt=""></button>
+        </div>
+        <div aria-hidden="true" class="marquee_group d-flex align-items-center justify-content-between gap-4">
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/DOORDASH-logo.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img
+              src="assests/images/COMPASS_LOGO_MASTER_L.png" alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/LOREAL.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Zendesk.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Lyft-Logo.wine.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/AnyDesk.png"
+              alt=""></button>
+        </div>
+        <div aria-hidden="true" class="marquee_group d-flex align-items-center justify-content-between gap-4">
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/DOORDASH-logo.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img
+              src="assests/images/COMPASS_LOGO_MASTER_L.png" alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/LOREAL.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Zendesk.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/Lyft-Logo.wine.png"
+              alt=""></button>
+          <button class="button fs-16 text-center border-0 rounded-2"><img src="assests/images/AnyDesk.png"
+              alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- marque-section-end -->
+
+  <!-- Tab-section-1 start -->
+  <div class="container py-120">
+    <div class="row">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-9">
+          <h2 class="text-center fw-bold">Smarter scheduling for teams who conduct meetings at scale</h2>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <ul class="nav nav-tabs d-flex gap-lg-5 justify-content-lg-center flex-nowrap overflow mb-6 ps-5">
+          <li class="nav-item"><a class="nav-link tab-btn active" data-toggle="tab" href="#tab1"
+              onclick="showTab(1)">Sales</a></li>
+          <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#tab2" onclick="showTab(2)">Marketing</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab3" onclick="showTab(3)">Customer
+              Success</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab4" onclick="showTab(4)">Recruiting</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab5" onclick="showTab(5)">IT</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab6" onclick="showTab(6)">Education</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="tab1" class="tab-pane fade show active">
+            <div class="row justify-content-between">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,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">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-2">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of you
+                  sales cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img1.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab2" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF40lEQVR4nO1Za2gcVRSeNj5qfT9jsHZz72xqiQ/EKqj4QvH91h8qRuoLsYpVFPGHyvpq7d4zGxOs2qogUqQasa3+KFqhtVgoVEGLrUoVQ5M5Zzat1paqVVOzcu7ObGZnZ2Zns5s0gR64sDv3+d3znXPuPdcw9st+GT8y/eWtR3u/haLtEqgQVoTCXQLoHDPXl5aATlQ7qfAXPVhPoWnmfPvYMQGR7v71CAH4jv6tBszoxdFfJjiXeP1kLn+6VPRbJOiufLO7MctTr/QeNaogmsE5VACt84BIsG+P0MS/MkvX6DbZ/jYu/Nu07POlwj9C+2Sd63R7hR9IhWtbMjh1VEC0ZzYdJBSudCd+0J20s3JR+B8D5Pq2XN9JErBXKOprBUrpPpZ9mVD0dwj4F7leAD3hanRVunvLwY1F0VNokgo/9CY1LZrlTrouwPUh06IHuG6GhccJhZtLCwXa4tHHtPAmATgYoOIqPWYWL/T1WXZxpnBAY0BkCpMl0Hu+SfewdlxwAZo4T3KXU7LbDxeAX4UY9Qau4zYSaDYD92lyJ8/FlPKDFIDv8vf6QBQKk4SixYHFrOeqlLLPLKMG4HP8nUFKoM8ijRpwdSrTO6UIBuf661IWznRBfhOg68K6cEhAqOQydXMdU8hHi1fDKBjj0T72KCMVzffVzeZvFZvns6GahTuGeyTqcBfwVpnqC4VJUtHbVUEM7/ISjzJCUZer7df0f8D7Ivo8VZsmFD4WSQ3LnlHUFm30G6MEzCUHEdBkpjBZKFoqFH1dijnhgXNIKpqTTBNAD8Xs4rBBKlzpuUe2j5pBDIN5lseYtbhwIAfDabm+Q4rAcFcUGJG1743XBHsSHQciJ/6c203L9R3jBSxT4SMjBlGiq/Mwj9WSwane8UcoXBPjMAbZhUfR6eYK3165e/PKtGfhnVWAJ9QKu2H7ngAzsrHggf6RQFeX08nCy8OibbD4d0GAfX1V4LWB2SuBbimNr+jWBP3+bAW6KJHN7Jd9ITIQYWO81kvc3lR4Y8MoFSitln1DXByrsBUL7y8Dw4Gtunchm6M3xw6pkBoORGGe3bB7vtuaYGOXRNw1cFPVHVN4RRKvMpIiFC3gsXmOBO03Rt5ZOGpHBqLhyZZ6bctPr/WXlHto5DniNUe/8+001l40/+MXuKcUtIL3kbpoRV9qe12w40i+JsfQb4hjXlLjjz83uecdDmKNA+LcrcdUNKeWoBwrrjGvjdmVDSW7qkLFZLaBu9sXDhxWBIIbItsBrmZnkxiIpk1XvlkCYfTk/Wf4j/N1ljc1rRc4p0a3QWd657YWYyTCWQ+dEQnXiqXbKPu8eoGkcvlz4ygteA0WXmDUI3wPjxh8QPv8YvDaPHLboB9KdIaoJB7ONeoWffMLv76yhytL4YzIPujxuNOCAHrfaJRw5kMCfh8yyQqul+CcEEnBOBCAgyk1cKK7GStC2vzImc2GAXEXe1ow/RNYyLLatYEfRW2EULg7DdTeUBAlMBbeEUUNCc61NVPLTavyGFFJjlETznQEtLJJV/QUmjg1WoNt6AOoHhNoY7kDwE5jtEUnCYJHkyydXQRJ85JrpHgl4GeHAIj1OpM5FmJa9skCcJtvcp2PauvMy0QHSc4R5/rSGjzg6z67GODEtzGWIsG51L1n6zSRTuMUF/ZFAiNfw205dSqBdrjg9nLuYExBDIOhZ7zFmVn7Nv7WCnRXAvvoqHxfqTGL2FApJrmXF3eUPuVPrBm+L8TYxk7vQlRKdiv6hMcy9qXw3UQA/sz5LbYd/iYAF8XQ6o3SIxDTSdFPo/7UllT4JMw5JqHo6VBPFOLhuC1f0swsnmWMJxGKOvTrrEsRqejbEG1857Xn40cwuzhuhJ8V+OksMqNv4aNcx9lBpp8xXiWV6Z3C2Xz+ze/l/jQs52rT8+h4rmNAnrset5LmxXr0Auzxeaserw0/lBoTSUxFV3lAWi280piwkilmDAVQf81Jg/EmAvAFofB5Y6LLdHAEl329DmOiyP+0yunptFKjIwAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img2.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab3" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,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">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img3.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab4" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,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">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img4.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab5" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,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">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales
+                  cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img5.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab6" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,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">
+                  <p class="fw-bold">Drive more revenue</p>
+                </div>
+                <p class="fs-16 mb-2">Book high value meetings in seconds and turn scheduling into competative
+                  challenges.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
+                  <p class="fw-bold">Speed up your sales cycle</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales
+                  cycle.</p>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <img class="tab-img p-2 rounded-5"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+                  <p class="fw-bold">Close more deals</p>
+                </div>
+                <p class="fs-16 mb-2">Keep your deal momentum high and remove scheduling friction at every stage of your
+                  sales
+                  cycle.</p>
+                <div class="d-flex align-items-center mb-3">
+                  <button class="text-blue bg-white border-0">Learn more</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="assests/images/tab-img6.webp" alt="Slide 1 Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tab-section-1 end -->
+
+  <!-- Grid-section start -->
+  <div class="container py-120">
+    <div class="row justify-content-center ">
+      <div class="col-12 col-md-7">
+        <h2 class="fw-bold">Stay in sync from any app, on any device</h2>
+      </div>
+      <div class="col-12 col-md-5 mt-2">
+        Boost productivity with integration that fold right into your workflow
+        <div class="d-flex align-items-center mt-2">
+          <button class="text-blue bg-white border-0">View all integration</button>
+          <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+              class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+            </svg></div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="grid mt-4">
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#ffee58" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+              <path fill="#fff"
+                d="M24.164,37c-0.067,0-0.133-0.002-0.199-0.005l0,0C23.923,36.998,23.88,37,23.835,37 c-1.54,0-2.529-0.716-3.485-1.408c-0.66-0.478-1.283-0.929-2.017-1.054c-0.358-0.061-0.714-0.091-1.059-0.091 c-0.62,0-1.11,0.098-1.468,0.169c-0.217,0.044-0.405,0.081-0.547,0.081c-0.149,0-0.31-0.033-0.38-0.278 c-0.061-0.212-0.105-0.418-0.147-0.617c-0.109-0.512-0.187-0.828-0.396-0.86c-2.443-0.387-3.142-0.913-3.298-1.288 c-0.022-0.053-0.035-0.107-0.038-0.16c-0.008-0.143,0.092-0.271,0.23-0.294c3.755-0.634,5.439-4.566,5.51-4.733 c0.002-0.005,0.004-0.009,0.006-0.014c0.23-0.477,0.275-0.892,0.134-1.231c-0.258-0.622-1.002-0.886-1.558-1.066 c-0.136-0.044-0.265-0.086-0.367-0.127c-1.11-0.45-1.202-0.911-1.159-1.147c0.074-0.401,0.597-0.68,1.02-0.68 c0.116,0,0.218,0.021,0.304,0.062c0.499,0.24,0.853,0.351,1.241,0.351c0.537,0,0.771-0.231,0.799-0.262 c-0.014-0.26-0.031-0.532-0.048-0.813c-0.112-1.819-0.251-4.079,0.311-5.369c1.683-3.867,5.254-4.167,6.308-4.167 c0.027,0,0.462-0.005,0.462-0.005h0.063c1.057,0,4.634,0.301,6.319,4.17c0.562,1.291,0.423,3.553,0.311,5.37l-0.005,0.079 c-0.015,0.253-0.031,0.499-0.043,0.734c0.027,0.028,0.242,0.24,0.729,0.26h0.001c0.37-0.015,0.711-0.109,1.177-0.333 c0.136-0.065,0.288-0.079,0.392-0.079c0.158,0,0.318,0.031,0.451,0.088l0.008,0.004c0.377,0.137,0.624,0.408,0.629,0.691 c0.005,0.266-0.194,0.667-1.168,1.061c-0.101,0.041-0.23,0.083-0.367,0.127c-0.557,0.181-1.313,0.428-1.571,1.05 c-0.141,0.34-0.096,0.753,0.134,1.231c0.002,0.005,0.004,0.009,0.006,0.014c0.07,0.167,1.753,4.098,5.51,4.732 c0.139,0.024,0.238,0.15,0.23,0.294c-0.003,0.054-0.016,0.108-0.038,0.161c-0.155,0.371-0.854,0.898-3.297,1.285 c-0.2,0.031-0.277,0.298-0.396,0.857c-0.043,0.203-0.087,0.403-0.148,0.613c-0.052,0.182-0.163,0.268-0.35,0.268h-0.03 c-0.129,0-0.314-0.024-0.547-0.071c-0.414-0.083-0.877-0.159-1.468-0.159c-0.344,0-0.701,0.031-1.059,0.091 c-0.733,0.125-1.356,0.576-2.014,1.053C26.693,36.284,25.704,37,24.164,37z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20" fill="#2196f3"></circle>
+              <path fill="#fff" d="M29,31H14c-1.657,0-3-1.343-3-3V17h15c1.657,0,3,1.343,3,3V31z"></path>
+              <polygon fill="#fff" points="37,31 31,27 31,21 37,17"></polygon>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#33d375"
+                d="M33,8c0-2.209-1.791-4-4-4s-4,1.791-4,4c0,1.254,0,9.741,0,11c0,2.209,1.791,4,4,4s4-1.791,4-4	C33,17.741,33,9.254,33,8z">
+              </path>
+              <path fill="#33d375"
+                d="M43,19c0,2.209-1.791,4-4,4c-1.195,0-4,0-4,0s0-2.986,0-4c0-2.209,1.791-4,4-4S43,16.791,43,19z"></path>
+              <path fill="#40c4ff"
+                d="M8,14c-2.209,0-4,1.791-4,4s1.791,4,4,4c1.254,0,9.741,0,11,0c2.209,0,4-1.791,4-4s-1.791-4-4-4	C17.741,14,9.254,14,8,14z">
+              </path>
+              <path fill="#40c4ff"
+                d="M19,4c2.209,0,4,1.791,4,4c0,1.195,0,4,0,4s-2.986,0-4,0c-2.209,0-4-1.791-4-4S16.791,4,19,4z"></path>
+              <path fill="#e91e63"
+                d="M14,39.006C14,41.212,15.791,43,18,43s4-1.788,4-3.994c0-1.252,0-9.727,0-10.984	c0-2.206-1.791-3.994-4-3.994s-4,1.788-4,3.994C14,29.279,14,37.754,14,39.006z">
+              </path>
+              <path fill="#e91e63"
+                d="M4,28.022c0-2.206,1.791-3.994,4-3.994c1.195,0,4,0,4,0s0,2.981,0,3.994c0,2.206-1.791,3.994-4,3.994	S4,30.228,4,28.022z">
+              </path>
+              <path fill="#ffc107"
+                d="M39,33c2.209,0,4-1.791,4-4s-1.791-4-4-4c-1.254,0-9.741,0-11,0c-2.209,0-4,1.791-4,4s1.791,4,4,4	C29.258,33,37.746,33,39,33z">
+              </path>
+              <path fill="#ffc107"
+                d="M28,43c-2.209,0-4-1.791-4-4c0-1.195,0-4,0-4s2.986,0,4,0c2.209,0,4,1.791,4,4S30.209,43,28,43z"></path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#c22c7b"
+                d="M21.93,6.12l-5.21,9.3L10.7,26.19l-0.33,0.58l-0.49,0.88l-2.19,3.91c-0.99-2.12-1.58-4.47-1.65-6.94	c-0.02-0.25-0.02-0.51-0.02-0.76c0-0.23,0.01-0.47,0.02-0.7c0.2-4.18,1.81-7.97,4.34-10.9C13.27,8.91,17.35,6.65,21.93,6.12z">
+              </path>
+              <path fill="#c22c7b"
+                d="M31.48,10.11l-5.54,9.9l-6.03,10.77l-0.33,0.58l-4.52,8.09l-0.07,0.12l-1.1,1.95	c-2.84-1.66-5.18-4.06-6.75-6.94l4.12-7.36l0.33-0.58l6.03-10.77l4.39-7.84l0.03-0.06c0.01,0,0.01,0,0.02,0	c0.56-0.02,1.14-0.03,1.71,0C26.57,8.1,29.18,8.86,31.48,10.11z">
+              </path>
+              <path fill="#c22c7b"
+                d="M40.06,15.84l-1.5,2.68l-3.4,6.09l-6.03,10.76l-0.32,0.59l-3.35,5.98h-0.01	c-0.75,0.06-1.5,0.08-2.27,0.04c-2.62-0.12-5.1-0.81-7.3-1.93h-0.01l0.06-0.11l4.55-8.13l0.33-0.58l6.02-10.77l6.61-11.8	C36.26,10.4,38.57,12.89,40.06,15.84z">
+              </path>
+              <path fill="#c22c7b"
+                d="M40.91,26.79c-0.01,0.22-0.03,0.44-0.05,0.66c-0.36,4.38-2.27,8.28-5.17,11.19	c-0.17,0.17-0.34,0.33-0.52,0.49c-2.58,2.4-5.88,4.05-9.51,4.61c-0.03,0.01-0.05,0.01-0.08,0.01l1.09-1.95l3.03-5.4l0.32-0.58	l6.04-10.77l3.38-6.04l0.06-0.1c0.01,0.03,0.03,0.05,0.03,0.08C40.53,21.38,41.04,24.03,40.91,26.79z">
+              </path>
+              <rect width="7.18" height="1" x="19.737" y="4.161" fill="#c22c7b"
+                transform="rotate(-60.908 23.328 4.661)"></rect>
+              <rect width="7.344" height="1" x="37.122" y="15.059" fill="#c22c7b"
+                transform="rotate(-60.784 40.792 15.559)"></rect>
+              <polygon fill="#c22c7b"
+                points="15.94,39.94 15.88,40.05 11.87,47.18 11,46.69 13.89,41.52 14.99,39.57 15.06,39.45 15.93,39.94">
+              </polygon>
+              <path fill="#a52b7a"
+                d="M16.72,15.42L10.7,26.19l-0.33,0.58l-4.33-2.15c-0.02-0.25-0.02-0.51-0.02-0.76	c0-0.23,0.01-0.47,0.02-0.7c0.2-4.18,1.81-7.97,4.34-10.9L16.72,15.42z">
+              </path>
+              <polygon fill="#a52b7a" points="25.94,20.01 19.91,30.78 19.58,31.36 11.26,27.22 11.59,26.64 17.62,15.87">
+              </polygon>
+              <polygon fill="#a52b7a" points="35.16,24.61 29.13,35.37 28.81,35.96 20.48,31.81 20.81,31.23 26.83,20.46">
+              </polygon>
+              <path fill="#a52b7a"
+                d="M35.69,38.64c2.9-2.91,4.81-6.81,5.17-11.19l-4.8-2.4l-6.04,10.77L29.7,36.4l5.47,2.73L35.69,38.64z">
+              </path>
+              <path fill="#762a88"
+                d="M7.69,31.56c-0.99-2.12-1.58-4.47-1.65-6.94c-0.02-0.25-0.02-0.51-0.02-0.76l4.68,2.33l-0.33,0.58	l-0.49,0.88L7.69,31.56z">
+              </path>
+              <path fill="#762a88"
+                d="M20.81,31.23l-0.33,0.58l-4.55,8.13l-0.87-0.49l4.52-8.09l0.33-0.58l-8.32-4.14l-0.33,0.58	l-4.12,7.36c1.57,2.88,3.91,5.28,6.75,6.94L11,46.69l0.87,0.49l4.01-7.13c2.2,1.12,4.68,1.81,7.3,1.93	c0.77,0.04,1.52,0.02,2.27-0.04h0.01l3.35-5.98l0.32-0.59L20.81,31.23z M35.17,39.13c-2.58,2.4-5.88,4.05-9.51,4.61	c-0.03,0.01-0.05,0.01-0.08,0.01l1.09-1.95l3.03-5.4l0.32-0.58l5.67,2.82L35.17,39.13z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <linearGradient id="dL-mBE-1ZiRfH_igXjFxca_BfxcvceDl78F_gr1" x1="24" x2="24" y1="1064.905" y2="1009.836"
+                gradientTransform="translate(0 -1014)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#005ce2"></stop>
+                <stop offset=".278" stop-color="#0080e8"></stop>
+                <stop offset=".569" stop-color="#009ced"></stop>
+                <stop offset=".82" stop-color="#00b0f1"></stop>
+                <stop offset="1" stop-color="#00b5f2"></stop>
+              </linearGradient>
+              <path fill="url(#dL-mBE-1ZiRfH_igXjFxca_BfxcvceDl78F_gr1)"
+                d="M13.5,6h21c4.142,0,7.5,3.358,7.5,7.5v21c0,4.142-3.358,7.5-7.5,7.5h-21	C9.358,42,6,38.642,6,34.5v-21C6,9.358,9.358,6,13.5,6z">
+              </path>
+              <path fill="#fff"
+                d="M32.644,17.513C30.974,15.408,27.983,14,24.558,14c-4.113,0-7.604,2.028-8.922,4.859 c-3.097,1.089-5.194,4.336-4.505,7.967c0.508,2.678,2.611,4.853,5.248,5.43c1.948,0.426,3.788,0.008,5.252-0.945l0.424,4.249 c0.045,0.449,0.617,0.602,0.876,0.235l3.419-4.858c0.083,0.004,0.16,0.024,0.244,0.024c2.096,0,3.89-1.259,4.715-3.065 c0.163,0.016,0.321,0.05,0.488,0.05c2.873,0,5.203-2.355,5.203-5.26C37,20.074,35.111,17.924,32.644,17.513z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20" fill="#ff5722"></circle>
+              <path fill="#fff"
+                d="M27.751,25.53c3.206-0.539,6.073-1.049,9.04-1.828L34.989,17.5c-3.103,0.903-5.797,2.355-8.73,3.888	C26.76,18.225,27.042,15.09,27,12h-6c0.117,2.929,0.393,5.992,0.772,9.144c-2.611-1.547-5.065-2.987-7.893-3.973l-2.123,6.099	c2.884,0.92,5.684,1.575,8.807,2.27c-2.392,2.135-4.555,4.13-6.463,6.641l5.145,3.904c1.784-2.483,3.154-5.066,4.766-7.881	c1.527,2.867,2.957,5.292,4.622,7.885l5.342-3.629C32.2,29.853,30.051,27.779,27.751,25.53z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path
+                d="M43.8,23.6C38.9,18.3,38.3,13,42.1,8l0.1-0.2l-1.9-2.6l-0.2,0.1c-3.3,1.2-7.2,0.8-9.9-1.2L30,4l-0.2,0.1c-4,2.8-7.8,2.8-11.7,0L18,4l-0.2,0.1c-3,2.2-7.3,2.3-9.9,1.2L7.8,5.2l-2,2.7L5.9,8c3.8,5.1,3.3,10.2-1.7,15.6L4,23.8l2,2C5.8,35.2,10.9,40.7,21,41.5L24,44l3.1-2.5c2.2-0.1,6.3-0.7,9.7-3.3c3.6-2.8,5.4-6.9,5.3-12.4l2-2L43.8,23.6z">
+              </path>
+              <path fill="#0D47A1"
+                d="M39.1,25.9H9c-0.4,3.5,0.4,6.3,2.2,8.5c2.1,2.5,5.7,4,10.2,4.4l5.2,0c4.4-0.2,7.9-1.7,10.1-4.2C38.6,32.3,39.4,29.4,39.1,25.9z M28.5,32.1c0,1.2-0.5,2.3-1.3,3.1c-0.8,0.8-2,1.3-3.1,1.3c0,0,0,0,0,0c-2.5,0-4.4-2-4.4-4.4c0-1.2,0.5-2.3,1.3-3.1c0.8-0.8,2-1.3,3.1-1.3c0,0,0,0,0,0c1.2,0,2.3,0.5,3.1,1.3C28.1,29.9,28.5,31,28.5,32.1L28.5,32.1z">
+              </path>
+              <path fill="#FFC107"
+                d="M29 23.2l-1.1 0 0 .9 1.1 0C29.4 24 29.5 23.4 29 23.2zM28.9 21.8h-1.1v.7h1.1C29.2 22.4 29.4 21.9 28.9 21.8z">
+              </path>
+              <path fill="#C62828"
+                d="M35.2,35.9c-1.2,0.9-2.7,1.7-4.4,2.1h-0.1V25.9h4.5V35.9z M17.3,38V25.9h-4.5v10C14.1,36.8,15.6,37.5,17.3,38L17.3,38z M24.1,36.5C24.1,36.5,24.1,36.5,24.1,36.5c-0.8,0-1.6-0.2-2.3-0.6v2.8l4.5,0v-2.7C25.6,36.3,24.9,36.5,24.1,36.5z M24.1,27.7C24.1,27.7,24.1,27.7,24.1,27.7c0.8,0,1.5,0.2,2.2,0.6v-2.5h-4.5v2.5C22.5,28,23.2,27.7,24.1,27.7z">
+              </path>
+              <path fill="#FFC107"
+                d="M21.2,29.6c-0.3,1.2-0.3,2.5,0.5,3.3c-0.3,0.4-0.6,0.5-1.2,0.6c-0.2-0.4-0.3-0.9-0.3-1.4C20.2,31.2,20.5,30.3,21.2,29.6z M21.6,35.1c2.2-0.2,3.5-0.9,4-2.1c-0.1-0.5-0.4-0.8-0.6-0.9c-0.2-0.1-0.4,0-0.7,0.1c-0.1,0.3-0.5,1-1.1,1.2c-0.1,0-0.2,0.1-0.4,0.1c-0.2,0-0.5-0.1-0.7-0.2c0,0,0,0-0.1-0.1c-0.4,0.5-0.8,0.7-1.3,0.8C21,34.5,21.3,34.8,21.6,35.1z M23.3,28.4c-0.5,0.1-1,0.3-1.4,0.6c-0.5,1.9-0.6,3.2,0.5,3.9c0.2,0.1,0.4,0.1,0.6,0.1c0.3-0.1,0.6-0.5,0.7-0.7c-0.5-0.4-1.1-1.1-0.2-2.4C23.2,29.2,23.2,28.7,23.3,28.4z M27.9,31.4c-0.1-0.7-0.5-1.4-1.1-2c-0.7-0.7-1.7-1.1-2.7-1.1c-0.4,0.3-0.4,0.7,0,1.2C25.6,29.2,27,30.3,27.9,31.4z M27.9,32.4c-0.6-1-2.1-2.8-3.8-2.4c-0.8,0.9-0.4,1.3,0,1.7c0.5-0.3,0.9-0.2,1.2-0.1c0.4,0.2,0.7,0.5,0.9,1.1c0.3-0.1,0.6,0,0.9,0.1c0.3,0.1,0.5,0.3,0.7,0.5C27.8,33.1,27.9,32.8,27.9,32.4z M24.1,36c1,0,2-0.4,2.7-1.1c0.3-0.3,0.5-0.5,0.6-0.9c-0.1-0.3-0.3-0.5-0.6-0.6c-0.2-0.1-0.4-0.1-0.6-0.1c-0.6,1.2-1.8,2-3.8,2.3C22.9,35.8,23.5,36,24.1,36C24.1,36,24.1,36,24.1,36z">
+              </path>
+              <path fill="#FFC107"
+                d="M42.6,23.8L42.6,23.8c-4.6-5-5.1-11.1-1.6-15.9L41,7.9L40,6.4l-0.1,0c-3.3,1.1-7.3,0.6-9.7-1.2l-0.1-0.1L30,5.3c-3.8,2.7-8.2,2.7-11.9,0L18,5.2l-0.1,0.1c-2.8,2-7.2,2.2-9.6,1.2l-0.1,0L7,7.9l0.1,0.1c5.3,7.3,0.1,13.9-1.6,15.8l-0.1,0.1l1.6,1.7c-0.3,4.3,0.7,7.8,3,10.4c2.5,2.8,6.4,4.4,11.3,4.7l2.6,2.2l2.6-2.2c1.7,0,7.5-0.5,11.3-4.6c2.4-2.6,3.4-6.1,3-10.5L42.6,23.8z M9.4,20.1C11.2,16,11,12,8.9,8.5L8.6,8l0.6,0.1c3.5,0.5,6.1,0.1,8.6-1.2L18,6.8l0.1,0.1c3.9,2.2,7.8,2.2,11.8,0l0.1-0.1l0.1,0.1c2.1,1.3,4.4,1.7,8.5,1.3l0.5,0L39,8.6c-2.1,3.5-2.2,7.6-0.4,11.5l0.2,0.4l-29.4,0L9.4,20.1z M29.2,24.9l-2.2,0l0-3.9l2.1,0c1.1,0.2,1.2,1.3,0.6,1.8C30.8,23.7,29.9,24.8,29.2,24.9z M23,23.6c0.2,0.3,0.5,0.5,0.8,0.5c0.3,0,0.5-0.2,0.6-0.5l0,0l0.8,0.4l0,0c-0.2,0.6-0.8,1-1.4,1c-0.1,0-0.2,0-0.3,0c-0.5-0.1-1-0.4-1.3-0.8c-0.4-0.6-0.4-1.5-0.1-2.4c0.3-0.6,0.8-0.9,1.5-0.9c0,0,0,0,0,0c0.7,0,1.3,0.4,1.6,0.9l0,0l-0.8,0.4l0,0c-0.2-0.3-0.5-0.4-0.7-0.4c0,0,0,0,0,0c-0.3,0-0.5,0.2-0.7,0.4C22.7,22.8,22.8,23.3,23,23.6z M19.5,22.4v0.8h-1.2v1.6h-0.8v-1.6v-0.8V21h0.8v0h2.1v0.8h-2v0.6H19.5z M37.1,34.9c-2.3,2.6-5.9,4.1-10.5,4.4l-5.2,0c-4.8-0.3-8.4-1.9-10.7-4.6c-2-2.3-2.7-5.4-2.3-9.1l0-0.3h31.1l0,0.3C40,29.4,39.1,32.5,37.1,34.9z">
+              </path>
+              <path fill="#FFF"
+                d="M23.7,20V9.1c-1.9,0-3.9-0.6-5.8-1.7c-2.4,1.3-5,1.7-8.2,1.3c1.8,3.4,2,7.3,0.4,11.2L23.7,20z"></path>
+              <path fill="#FFEB3B"
+                d="M38.2,8.8c-3.7,0.3-6.1-0.1-8.2-1.3c-1.9,1.1-3.9,1.6-5.8,1.7V20l13.5,0C36.2,16.2,36.4,12.2,38.2,8.8z">
+              </path>
+              <path fill="#FF1744"
+                d="M36.2,20l-1.6,0V8.8c0.5,0,1,0.1,1.6,0.1V20z M27.1,8.7C26.5,8.8,26,9,25.5,9V20l1.6,0V8.7z M33.2,8.6c-0.6-0.1-1.1-0.3-1.6-0.4V20l1.6,0V8.6z M30.1,7.5C30.1,7.5,30.1,7.5,30.1,7.5C29.5,7.7,29,8,28.5,8.2V20l1.6,0V7.5z M23.7,12.1h-4.2V8.2c-0.5-0.2-1-0.5-1.5-0.8c-0.9,0.5-1.8,0.8-2.8,1.1v3.5h-4.2c0.3,1.4,0.3,2.8,0.1,4.3h4.1V20l4.3,0v-3.6h4.2V12.1z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#283593"
+                d="M7,14c0.555,0.021,2.57-2.677,3-3c3.133,4.289,3.686,5.949,10.908,12.464C20.473,20.495,15.674,11.737,13,9c1.305-1.319,3.242-4.102,4-5c0.802,2.309,4.041,11.557,7,17l0,0c2.262-4.289,6.036-15.351,6-17c1.293,1.197,3.49,3.791,4.916,5.031c-2.785,2.144-6.988,11.959-8.728,16.577C25.975,26.284,26,28.047,26,28.047c1.56,1.197,7.043,7.046,8,7.953c-2.927-13.177,1.216-22.031,4-25c0.446,0.47,1.574,1.546,3,3c-1.479,1.979-3.88,6.613-4,12c-0.174,7.752,0.912,11.949,3,15c-0.934,1.145-1.676,1.431-3,3c-2.095-1.924-11-10.415-11-10.415V39c0.067,0.342-0.337,3.546,1,5h-6c0.981-1.326,0.977-4.215,1-5.113v-9.32c-1.159-1.112-6.76-6.312-7.27-6.845l0,0C15.339,25.856,15.35,35.66,11,43c-0.357-0.514-4.073-3.885-4-4c1.337-2.095,3.955-7.596,4-12C11.082,18.958,8.293,15.967,7,14L7,14z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#424242"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z">
+              </path>
+              <path fill="#b71c1c" d="M31,12h-5v23.5c2.5,0,4.986,0.512,5,0.5S31,12,31,12z"></path>
+              <path fill="#b71c1c" d="M17,12h5v23.5c-2.5,0-4.986,0.512-5,0.5S17,12,17,12z"></path>
+              <path fill="#e53935" d="M22,12h-5l9,23.5c2.5,0,4.986,0.512,5,0.5S22,12,22,12z"></path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#eee"
+                d="M34,42H14c-4.411,0-8-3.589-8-8V14c0-4.411,3.589-8,8-8h20c4.411,0,8,3.589,8,8v20 C42,38.411,38.411,42,34,42z">
+              </path>
+              <circle cx="24" cy="24" r="10" fill="#212121"></circle>
+              <circle cx="35.5" cy="12.5" r="2" fill="#ffa000"></circle>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#ffc107"
+                d="M24,22.5C24,16.701,19.299,12,13.5,12S3,16.701,3,22.5c0,0,0,0.339,0,0.5c0,0.552,0.448,1,1,1	s20,0,20,0s0-0.448,0-1C24,22.839,24,22.5,24,22.5z">
+              </path>
+              <path fill="#4caf50"
+                d="M22.5,24C16.701,24,12,28.701,12,34.5S16.701,45,22.5,45c0,0,0.339,0,0.5,0c0.552,0,1-0.448,1-1	s0-20,0-20s-0.448,0-1,0C22.839,24,22.5,24,22.5,24z">
+              </path>
+              <path fill="#1976d2"
+                d="M24,25.5C24,31.299,28.701,36,34.5,36S45,31.299,45,25.5c0,0,0-0.339,0-0.5c0-0.552-0.448-1-1-1	s-20,0-20,0s0,0.448,0,1C24,25.161,24,25.5,24,25.5z">
+              </path>
+              <path fill="#ff3d00"
+                d="M25.5,24C31.299,24,36,19.299,36,13.5S31.299,3,25.5,3c0,0-0.339,0-0.5,0c-0.552,0-1,0.448-1,1	s0,20,0,20s0.448,0,1,0C25.161,24,25.5,24,25.5,24z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+              <path fill="#fff"
+                d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#FFC107" d="M17 6L31 6 45 30 31 30z"></path>
+              <path fill="#1976D2" d="M9.875 42L16.938 30 45 30 38 42z"></path>
+              <path fill="#4CAF50" d="M3 30.125L9.875 42 24 18 17 6z"></path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#03a9f4" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+              <path fill="#fff"
+                d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3 c-0.951,0.559-2.671,1.156-3.793,1.372C31.311,15.422,30.033,15,28.617,15C25.897,15,24,17.305,24,20v2c-4,0-7.9-3.047-10.327-6 c-0.427,0.721-0.667,1.565-0.667,2.457c0,1.819,1.671,3.665,2.994,4.543c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057 c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27c0.626,1.935,3.773,2.958,5.928,3c-1.686,1.307-4.692,2-7,2 c-0.399,0-0.615,0.022-1-0.023C14.178,33.357,17.22,34,20,34c9.057,0,14-6.918,14-13.37c0-0.212-0.007-0.922-0.018-1.13 C34.95,18.818,35.342,18.104,36,17.12">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#0f0"
+                d="M35,6H13c-3.866,0-7,3.134-7,7v22c0,3.866,3.134,7,7,7h22c3.866,0,7-3.134,7-7V13	C42,9.134,38.866,6,35,6z">
+              </path>
+              <path fill="#fff"
+                d="M24,12c-7.18,0-13,4.925-13,11c0,4.074,2.624,7.622,6.513,9.523C16.931,33.773,16.087,34.949,15,36	c2.162-0.38,4.191-1.175,5.937-2.32C21.921,33.882,22.943,34,24,34c7.18,0,13-4.925,13-11S31.18,12,24,12z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#ef5350"
+                d="M42,34c0,4.418-3.582,8-8,8H14c-4.418,0-8-3.582-8-8V14c0-4.418,3.582-8,8-8h20c4.418,0,8,3.582,8,8	V34z">
+              </path>
+              <path fill="#fff"
+                d="M35.897,17.469c-0.084-0.177-0.214-0.331-0.389-0.434l-11-5.896C24.351,11.046,24.176,11,24,11	s-0.351,0.046-0.508,0.139l-11,5.896c-0.171,0.101-0.299,0.25-0.384,0.423L23,24.232L24,37l1-12.767L35.897,17.469z">
+              </path>
+              <path fill="#81d4fa"
+                d="M24,37c0.184,0,0.368-0.051,0.53-0.152l11-6.25C35.822,30.415,36,30.095,36,29.75V17.896	c0-0.151-0.04-0.295-0.103-0.427L24,23.854V37z">
+              </path>
+              <path fill="#b2ebf2"
+                d="M24,23.854l-11.892-6.397C12.042,17.592,12,17.74,12,17.896V29.75c0,0.345,0.178,0.665,0.47,0.848	l11,6.25C23.632,36.949,23.816,37,24,37V23.854z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <path fill="#b71c1c"
+                d="M24,28l0.002-17.678C24.004,6.28,27.361,3,31.501,3C35.642,3,39,6.279,39,10.322 c0,1.887-0.752,3.591-1.951,4.885l0.039,0.016L24,28z">
+              </path>
+              <path fill="#4fc3f7"
+                d="M8,29.5C8,20.545,15.016,14,23.999,14C32.983,14,40,20.545,40,29.5C40,38.455,32.983,45,23.999,45 C15.016,45,8,38.455,8,29.5z M31,29.501C31,24.579,28.331,21,24,21c-4.332,0-7,3.579-7,8.501C17,34.421,19.668,38,24,38 C28.331,38,31,34.421,31,29.501z">
+              </path>
+              <path fill="#e53935"
+                d="M24,28V10.323C24,6.279,20.641,3,16.499,3C12.357,3,9,6.28,9,10.322c0,1.887,0.748,3.59,1.952,4.885 l-0.043,0.018L24,28z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="bg-white d-flex justify-content-center p-4 rounded-2"><svg xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20" fill="#e64a19"></circle>
+              <path fill="#fff"
+                d="M29.91,37c-0.47,2.84-2.94,5-5.91,5s-5.44-2.16-5.91-5H29.91z M34,32H14v3h20V32z M33.5,30 c1-1,2.5-3.5,3-5C35,25.5,30,26.5,30,26.5c1-1.5,2-3.5,2-6c0-3.5-4-7-3-11.5c-2.5,2.5-2.5,7.5-2.5,9.5c-0.5-1.5-0.5-3-0.5-4 c0-3-3-5.5-2-8.5c0,0-2.5,1-2.5,4c0,3.5-0.5,5.5-1.5,6.5c0-3-1-5-2.5-5.5c0.5,1,0.5,1.5,0.5,2c0,1.5-2.5,6-2.5,9c0,2,1,3.5,2.5,4.5 c0,0-4-1-6.5-1.5c0.5,1.5,2,4,3,5C14.5,30,31.5,30,33.5,30z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Grid-section end -->
+
+  <section class="section-2">
+    <div class="container py-120">
+      <div class="row justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-lg-8">
+            <h2 class="text-white fw-bold text-center mb-5">We make scheduling easier than ever for you</h2>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="">
-            <img src="assests/images/image-1.webp" alt="" class="">
+          <h3 class="text-white mb-3 fw-semibold">Share your meeting availability</h3>
+          <div class="d-flex gap-2 mb-3 align-items-center">
+            <img class="tab-img2 p-2 rounded-5"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABR0lEQVR4nO2asUoDQRCGpxACYpVYKAZk/0QJ8Qms7G19DzvrdMHsekXA57E2nXYSrI7bDam1sol4bEAWQThN5uaYD7bf7/9n2GaJFGH0p/MWnL+G9Y+w/h0urDgPVeEky49gwxP35fEXkbKJmkmgikg5TjW4OP5BZNYIEWP9W0MaCeyXhop847dkulnepg0wGBedrTayCYk1KvIT2oi00RqMiw41Ydmh70jQBxE6Wo5/J6DLHuFOHtpIAnfy0EYSuJOHNpLAnTy0kQTu5KGNJHAnD20kgTt5aCMJ3MlDG0loaCN+hkm4PL3z+yQNRAnj/MPFaLVDUkEU6bswJMkY6z9Kkem8RZIxzr9+ifRscU6SMS5M4ng9H478Lkmlm+VtY0MRZV6MDVfHdnlAEundLs7WI1aXQ1UZ3i/34BY35Vsi9VONQtvnE1DerzGjykF8AAAAAElFTkSuQmCC">
+            <p class="text-white fw-bold">Accurate, real time scheduling</p>
+          </div>
+          <p class="text-white fs-16">High-value meetings are the lifeblood of your business.
+            increase revenue, retain Customers, and land recruits with the #1 scheduling automation platform.
+          </p>
+          <div class="d-flex align-items-center mb-3">
+            <button class="text-white section-2 border-0">Learn more</button>
+            <div class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+              </svg></div>
           </div>
         </div>
-      </div>
-  </section>
-  <!-- hero-section End-->
-
-  <!-- Trello101-Container -->
-  <div class="container pb-0 py-120">
-    <div class="row">
-      <div class="col-12 col-md-6  col-lg-6 mb-4">
-        <p class="text-black fw-medium">Trello 101</p>
-        <h2 class="mb-4 text-black fw-medium">A productivity powerhouse</h2>
-        <p class="mb-4 text-black fs-22">Simple, flexible, and powerful. All it takes are boards, lists, and cards to
-          get a clear view of who’s doing what and what needs to get done. Learn more in our
-          <span class="text-blue text-dec0ration-underline">guide for getting started</span>
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- Trello101-Container End-->
-
-  <!-- Thumbnails-Container -->
-  <section class="banner-section">
-    <div class="container d-lg-flex gap-4">
-      <div class="thumbnail-container d-flex flex-column">
-        <div class="thumbnails d-flex flex-column">
-          <div class="thumbnail p-3 active rounded-3 bg-white border-0 position-relative text-left h-100" data-index="0"
-            onclick="changeSlide(0)">
-            <h3 class="text-black fw-medium text-start">Boards</h3>
-            <p class="text-black text-start">Trello boards keep tasks organized and work moving forward. In a
-              glance, see everything from “things to do” to “aww yeah, we did it!”</p>
-          </div>
-          <div class="thumbnail p-3" data-index="1" onclick="changeSlide(1)">
-            <h3 class="text-black fw-medium text-start">Lists</h3>
-            <p class="text-black text-start">The different stages of a task. Start as simple as To Do, Doing or
-              Done—or build a workflow custom fit to your team’s needs. There’s no wrong way to Trello.</p>
-          </div>
-          <div class="thumbnail p-3" data-index="2" onclick="changeSlide(2)">
-            <h3 class="text-black fw-medium text-start">Cards</h3>
-            <p class="text-black text-start">Cards represent tasks and ideas and hold all the information to get
-              the job done. As you make progress, move cards across lists to show their status.</p>
-          </div>
-        </div>
-      </div>
-      <div class="main-slide overflow-hidden">
-        <div id="slick-slider">
-          <div><img class="w-100 d-block" src="assests/images/image-2" alt="Main Slide 1"></div>
-          <div><img class="w-100 d-block" src="assests/images/image-3" alt="Main Slide 2"></div>
-          <div><img class="w-100 d-block" src="assests/images/image-4.webp" alt="Main Slide 3"></div>
+        <div class="col-12 col-lg-6">
+          <img src="assests/images/Calendly-Email-Embed-Recruiting.webp" alt="Slide 1 Image" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
-  <!-- Thumbnails-Container End-->
 
-  <!-- swiper slider-container -->
-  <div class="container-fluid ps-5 py-120">
-    <div class="row">
-      <div class="col-12 col-md-6  col-lg-7 mb-4">
-        <p class="text-black fw-medium mb-3">TRELLO IN ACTION</p>
-        <h2 class="mb-4 fw-medium">Workflows for any project, big or small</h2>
-      </div>
-
-      <div class="swiper pe-3 ms-auto ps-2 position-relative">
-        <div class="swiper-wrapper mt-5">
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color1 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-1.png">
-                </div>
-                <h3 class="text-black text-start fw-medium">Project management</h3>
-                <p class="cite text-black text-start">Keep tasks in order, deadlines on track, and team members
-                  aligned with Trello.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color2 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-2.png">
-                </div>
-                <h3 class="text-black text-start">Meetings</h3>
-                <p class="cite text-black text-start">Empower your team meetings to be more productive,
-                  empowering,
-                  and dare we say—fun.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color3 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-3.png">
-                </div>
-                <h3 class="text-black text-start">Onboarding</h3>
-                <p class="cite text-black text-start">Onboarding to a new company or project is a snap with
-                  Trello’s
-                  visual layout of to-do’s, resources, and progress tracking.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color4 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-4.png">
-                </div>
-                <h3 class="text-black text-start">Task management</h3>
-                <p class="cite text-black text-start">Use Trello to track, manage, complete, and bring tasks
-                  together like the pieces of a puzzle, and make your team’s projects a cohesive success every time.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color5 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-5.svg">
-                </div>
-                <h3 class="text-black text-start">Brainstormig</h3>
-                <p class="cite text-black text-start">Unleash your team’s creativity and keep ideas visible,
-                  collaborative, and actionable.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper position-relative h-100">
-              <div class="bg-color6 pb-5 rounded-bottom-0 rounded-2"></div>
-              <div class="content box-shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-6.png">
-                </div>
-                <h3 class="text-black text-start">Resource hub</h3>
-                <p class="cite text-black text-start">Save time with a well-designed hub that helps teams find
-                  information easily and quickly.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-nav-wrapper d-flex top-0 position-absolute">
-          <div class="swiper-button-prev  position-relative"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-              height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg></div>
-          <div class="swiper-button-next  position-relative"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-              height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- swiper slider-container End-->
-
-  <!-- heading-button-container -->
-  <div class="container mt-0 mb-5">
-    <div class="row">
-      <div class="col-12 col-lg-9">
-        <p class="text-black mb-4 p-1 fs-20">No need to start from scratch. Jump-start your workflow with a proven
-          playbook
-          designed for different teams. Customize it to make it yours.</p>
-      </div>
-      <div class="col-lg-3">
-        <button class="btn btn-light text-black mb-5">Explore all Use Cases</button>
-      </div>
-    </div>
-  </div>
-  <!-- heading-button-container End-->
-
-  <!-- Blog-Card-container -->
-  <section class="Blog-section mb-5 ">
-    <div class="container py-120">
-      <div class="row">
-        <div class="">
-          <h2 class="text-center text-white fw-medium mb-3">See work in a whole new way</h2>
-          <p class="text-center text-white mb-3">View your team’s projects from every angle and bring a fresh
-            perspective to the task at hand.</p>
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-light text-black justify-content-center bg-white mb-5">Discover all Trello
-              views</button>
-          </div>
-        </div>
-
-        <div class="box-shadow rounded-3 p-4 mb-5 bg-white py-20">
-          <div class="row ">
-            <div class="col-12 col-lg-7 mb-sm-0">
-              <div class="">
-                <img src="assests/images/blog-img1" alt="">
-              </div>
-            </div>
-            <div class="col-12 pt-4 col-lg-5">
-              <h4 class="text-black mb-3"><button class="blogIcon-1 border-0 bg-white"><svg fill="currentColor"
-                    aria-hidden="true" viewBox="0 0 32 32">
-                    <path
-                      d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z">
-                    </path>
-                  </svg></button>HIT DEADLINES EVERYTIME</h4>
-              <p class="text-black fs-20 mb-3 mb-lg-4">From weekly sprints to annual planning, Timeline view keeps
-                all tasks on track. Quickly get a glimpse of what’s coming down the pipeline and identify any gaps that
-                might impede your team’s progress.</p>
-              <p class=" text-blue text-decoration-underline mb-2 fs-20">Learn more about Timeline view</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="box-shadow rounded-3 Blog-card p-4 bg-white py-20">
-          <div class="row ">
-            <div class="col-12 pt-4 col-lg-5">
-              <h4 class="text-black mb-3"><button class="blogIcon-2 border-0 bg-white"><svg fill="currentColor"
-                    aria-hidden="true" viewBox="0 0 32 32">
-                    <path
-                      d="M6.66 6.667h18.68A2.66 2.66 0 0 1 28 9.325v16.016A2.659 2.659 0 0 1 25.34 28H6.66A2.66 2.66 0 0 1 4 25.341V9.325a2.659 2.659 0 0 1 2.66-2.658ZM6.667 12v12A1.333 1.333 0 0 0 8 25.333h16A1.333 1.333 0 0 0 25.333 24V12H6.667ZM8 5.333a1.333 1.333 0 0 1 2.667 0v1.334H8V5.333Zm13.333 0a1.333 1.333 0 0 1 2.667 0v1.334h-2.667V5.333Zm-12 12v-2.668H12v2.668H9.333Zm10.667 0v-2.668h2.667v2.668H20Zm-5.333 0v-2.668h2.668v2.668h-2.668Zm-5.334 5.334V20H12v2.667H9.333Zm5.334 0V20h2.668v2.667h-2.668Zm5.333 0V20h2.667v2.667H20Z">
-                    </path>
-                  </svg></button>STAY ON TOP OF TASKS</h4>
-              <p class="text-black mb-3 mb-lg-4 fs-20">Start each day without any surprises. Whether scheduling an
-                editorial calendar or staying on top of to-dos, Calendar view is like a crystal ball giving you a clear
-                vision of what work lies ahead.</p>
-              <p class="text-blue text-decoration-underline mb-2 fs-20">Learn more about Calendar view</p>
-            </div>
-            <div class="col-12 col-lg-7 mb-sm-0">
-              <div class="">
-                <img src="assests/images/blog-img2" alt="" height="225px" class="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Blog-Card-container End-->
-
-  <!-- Cards -->
+  <!-- Calendy_Modal-section start -->
   <div class="container py-120">
-    <div class="row justify-content-center gap-3">
-      <p class="text-black fw-medium mb-md-2 mt-7">POWERFUL WAYS TO GROW</p>
-      <h2 class="text-black fw-medium mb-md-2">Do more with Trello</h2>
-      <p class="text-black fs-20">Trello’s intuitive features give any team the ability to quickly set up and customize
-        workflows for just about anything.</p>
-      <div class="Trello-card p-4 rounded-3">
-        <img class="mb-4" src="assests/images/img1.svg" alt="Card Image">
-        <h3 class="text-black">Integrations</h3>
-        <p class="text-black mb-4">Connect the apps your team already uses into your Trello workflow or add a
-          Power-Up
-          to fine-tune your specific needs.</p>
-        <button class="btn btn-light text-black ">Browse Integrations</button>
-      </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-12">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12  col-lg-9">
+            <h2 class="text-center fw-bold pb-3">See Calendy in action</h2>
+            <p class="text-center p-3 fs-16">Calendy is your scheduling automation platform eith team based
+              scheduling solutions and integration for every department, and advanced security features </p>
+          </div>
+        </div>
 
-      <div class="Trello-card p-4 rounded-3">
-        <img class="mb-4" src="assests/images/img2.svg" alt="Card Image">
-        <h3 class="text-black">Butler Automation</h3>
-        <p class="text-black mb-5">This is a sample paragraph for the card. You can customize the content here.
-        </p>
-        <button class="btn btn-light text-black ">Get to know Automation</button>
-      </div>
-      <div class="Trello-card p-4 rounded-3">
-        <img class="mb-4" src="assests/images/img3.svg" alt="Card Image">
-        <h3 class="text-black">Trello Enterprise</h3>
-        <p class="text-black mb-5">The productivity tool teams love, paired with the features and security needed
-          for scale.</p>
-        <button class="btn btn-light text-black ">Explore Enterprise</button>
+        <div class="d-flex align-items-center mb-4 justify-content-center bg-white">
+          <button class="text-blue bg-white border-0">Sign up for free</button>
+          <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+              class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+            </svg></div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="col-12 col-md-9 mb-4">
+            <div class="image-container position-relative">
+              <img src="assests/images/modal-img.png" alt="" class="w-100 rounded-2">
+              <div>
+                <button type="button" class="btn position-absolute video-btn" data-toggle="modal"
+                  data-src="https://www.youtube.com/embed/NFWSFbqL0A0" data-target="#myModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <g filter="url(#filter0_d_1_339)">
+                      <path
+                        d="M25.072 0C13.5173 0 4.15039 9.36692 4.15039 20.9216C4.15039 32.4763 13.5173 41.8432 25.072 41.8432C36.6267 41.8432 45.9936 32.4763 45.9936 20.9216C45.9936 9.36692 36.6267 0 25.072 0ZM19.3556 30.0213V11.8219L35.1167 20.9216L19.3556 30.0213Z"
+                        fill="white"></path>
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_1_339" x="0.150391" y="0" width="49.8438" height="49.8433"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"></feColorMatrix>
+                        <feOffset dy="4"></feOffset>
+                        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                        <feComposite in2="hardAlpha" operator="out"></feComposite>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                        </feColorMatrix>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_339"></feBlend>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_339" result="shape">
+                        </feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content bg-transparent border-0">
+                  <div class="modal-header border-0">
+                    <button type="button" class="btn-close bg-white m-0 p-2 top-0 position-absolute "
+                      data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body p-3">
+
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="1000" height="500"
+                        src="https://www.youtube.com/embed/DbRXv5TXMEE?si=cn-DKJeHIl7xufZN" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        class="rounded-3" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-  <!-- Cards End -->
+  <!-- Calendy_Modal-section end -->
 
-  <!-- surveyCard-container -->
-  <section class="bg-section1">
-    <div class="container position-relative card-section pt-5 p-3 overflow-hidden">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="row surveyCard rounded-3">
-            <div class="col-lg-8 p-4">
-              <div class="d-flex flex-column justify-content-between h-100">
-                <p class="text-black fs-24 text-start">[Trello is] great for simplifying complex processes. As a
-                  manager, I can
-                  chunk [processes] down into bite-sized pieces for my team and then delegate that out, but still keep a
-                  bird's-eye view.</p>
-                <div>
-                  <figure class="border-center d-block mb-3"></figure>
-                  <p class="text-black text-start">Joey Rosenberg</p>
-                  <p class=" text-black text-start">Global Leadership Director at Women Who Code</p>
-                  <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <img src="assests/images/women code.svg" alt="">
-                    <a href="">Read the story</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 px-0">
-              <div class="swiper-text h-100 p-4 rounded-2 rounded-start-0 d-flex flex-column justify-content-between">
-                <div>
-                  <h3 class="text-start fw-medium text-white">75% of organizations report that Trello delivers value to
-                    their
-                    business within
-                    30
-                    days.</h3>
-                </div>
-                <div class="text-start text-white">
-                  <a href="">Trello TechValidate Survey</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide ">
-          <div class="row surveyCard rounded-3">
-            <div class="col-lg-8 p-4">
-              <div class="d-flex flex-column justify-content-between h-100">
-                <p class="text-black fs-24 text-start">Whether someone is in the office, working from home, or
-                  working
-                  on-site with a client, everyone can share context and information through Trello.</p>
-                <div>
-                  <figure class="border-center d-block mb-3"></figure>
-                  <p class="text-black text-start">Sumeet Moghe</p>
-                  <p class=" text-black text-start">Product Manager at ThoughtWorks</p>
-                  <div class="d-flex flex-wrap justify-content-between align-items-center">
-                    <img src="assests/images/thoughtworks.svg" alt="">
-                    <a href="">Read the story</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 px-0">
-              <div class="swiper-text h-100 p-4 rounded-2 rounded-start-0 d-flex flex-column justify-content-between">
-                <div>
-                  <h3 class="text-start fw-medium text-white">75% of organizations report that Trello delivers value to
-                    their
-                    business within
-                    30
-                    days.</h3>
-                </div>
-                <div class="text-start text-white">
-                  <a href="">Trello TechValidate Survey</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="swiper-slide">
-          <div class="row surveyCard rounded-3">
-            <div class="col-lg-8 p-4">
-              <div class="d-flex flex-column justify-content-between h-100">
-                <div>
-                  <p class="text-black fs-24 text-start">We used Trello to provide clarity on steps, requirements,
-                    and
-                    procedures. This was exceptional when communicating with teams that had deep cultural and language
-                    differences.</p>
-                </div>
-                <div>
-                  <figure class="border-center mb-3"></figure>
-                  <p class="text-black text-start">Jefferson Scomacao</p>
-                  <p class=" text-black text-start">Development Manager at IKEA/PTC</p>
-                  <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <img src="assests/images/ptc-logo.svg" alt="">
-                    <a href="">Read the story</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 px-0">
-              <div class="swiper-text p-4 rounded-2 rounded-start-0 d-flex flex-column justify-content-between">
-                <div>
-                  <h3 class="text-start fw-medium text-white">75% of organizations report that Trello delivers value to
-                    their
-                    business within
-                    30
-                    days.</h3>
-                </div>
-                <div class="text-start text-white">
-                  <a href="">Trello TechValidate Survey</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="swiper-pagination position-absolute d-flex  justify-content-end"></div>
-      <div class="swiper-nav top-0 gap-3 position-absolute d-flex justify-content-end align-items-center">
-        <div class="swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-            fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-          </svg></div>
-        <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-          </svg></div>
-      </div>
-    </div>
-  </section>
-  <!-- surveyCard-container End-->
-
-
-  <!-- Trello heading and Button-Container -->
-  <section class="bg-section2">
-    <div class="container hero pt-5 pb-0">
-      <h2 class="text-black text-center fw-medium mb-3">Trello priced your way</h2>
-      <p class="text-black text-center fw-normal fs-24 mb-3">Trusted by millions, Trello powers teams all around the
-        world.
-      </p>
-      <div class="d-flex justify-content-center">
-        <button class="btn btn-secondary rounded-2">Compare plans</button>
-      </div>
-    </div>
-    <!-- Trello heading and Button-Container End-->
-
-    <!--Pricing Cards-section -->
+  <!-- Tab-section-2 start -->
+  <section class="section-1 Tab">
     <div class="container py-120">
       <div class="row">
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card bg-white d-flex gap-4 flex-column justify-content-between h-100">
-            <div>
-              <h4 class="text-black text-start fw-medium">FREE</h4>
-              <div>
-                <div class="text-start mb-9 fw-normal">
-                  <span>$</span>
-                  <span class="fs-48">0</span>
-                  <span>USD</span>
-                </div>
-                <p class="text-black text-start fs-11 mb-5">Free for your whole team</p>
-              </div>
-              <p class="text-black text-start">For individuals or teams looking to organize any
-                project.</p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Get started</span></a>
-              </div>
-              <div>
-                <a href="">Learn more about Free</a>
-              </div>
-            </div>
+        <div class="col-12 col-md-6">
+          <h2 class="fw-bold mb-4">Discover how businesses grow with Calendy</h2>
+        </div>
+        <div class="col-12 col-md-6 mt-2 mb-5">
+          <div class="mb-3">Learn how teams of all sizes are using Calendy's scheduling automation platform to create
+            value
+          </div>
+          <div class="d-flex align-items-center">
+            <button class="text-blue border-0">View customer stories</button>
+            <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+              </svg></div>
           </div>
         </div>
 
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card d-flex gap-4 flex-column justify-content-between bg-white h-100">
-            <div>
-              <h4 class="text-black text-start fw-medium">STANDARD</h4>
+        <!-- <div class="tab-container"> -->
+          <div class="mt-3 mb-5">
+            <ul class="nav d-flex gap-5  gap-lg-0 justify-content-between" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 active rounded-2" id="pills-company-tab" data-toggle="pill" href="#pills-company"
+                  role="tab" aria-controls="pills-company" aria-selected="true"><img
+                    src="assests/images/Smith's_logo.svg" alt="">
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 rounded-2" id="pills-product-tab" data-toggle="pill" href="#pills-product" role="tab"
+                  aria-controls="pills-product" aria-selected="false"><img src="assests/images/hackerone.svg"
+                    alt=""></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 rounded-2" id="pills-news-tab" data-toggle="pill" href="#pills-news" role="tab"
+                  aria-controls="pills-news" aria-selected="false"><img src="assests/images/Airtable_Logo.svg"
+                    alt=""></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 rounded-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                  aria-controls="pills-contact" aria-selected="false"><img src="assests/images/ci-assante-logo.svg"
+                    alt=""></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 rounded-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                  aria-controls="pills-contact" aria-selected="false"><img src="assests/images/texas.svg" alt=""></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="tab px-4 py-3 rounded-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                  aria-controls="pills-contact" aria-selected="false"><img src="assests/images/texas.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab">
+            <div class="d-md-flex justify-content-between">
               <div>
-                <div class="text-start mb-9 fw-normal">
-                  <span>$</span>
-                  <span class="fs-48">5</span>
-                  <span>USD</span>
-                </div>
-                <p class="text-black text-start mb-4 fs-11">Per user/month if billed annually ($6 billed monthly)</p>
+                <h1>26%</h1>
+                <p class="fs-16">increase in website booking </p>
+                <div class="border-tab mb-3"></div>
               </div>
-              <p class="text-black text-start">For small teams that need to manage work and scale
-                collaboration.
-              </p>
+              <div>
+                <h1>20%</h1>
+                <p class="fs-16">more sales meetings held</p>
+                <div class="border-tab"></div>
+              </div>
+              <div>
+                <h1>360%</h1>
+                <p class="fs-16">increase in partner calls</p>
+                <div class="border-tab"></div>
+              </div>
             </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Sign up now</span></a>
+            <div class="d-flex align-items-center">
+              <button class="text-blue border-0 p-0">Read full customer stories</button>
+              <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                  </path>
+                </svg></div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+            <div class="d-md-flex justify-content-between">
+              <div>
+                <h1>27%</h1>
+                <p class="fs-16">increase in website booking </p>
+                <div class="border-tab mb-3"></div>
               </div>
               <div>
-                <a href="">Learn more about Standard</a>
+                <h1>23%</h1>
+                <p class="fs-16">more sales meetings held</p>
+                <div class="border-tab"></div>
+              </div>
+              <div>
+                <h1>350%</h1>
+                <p class="fs-16">increase in partner calls</p>
+                <div class="border-tab"></div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <button class="text-blue border-0 p-0">Read full customer stories</button>
+              <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                  </path>
+                </svg></div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">
+            <div class="tab-pane fade show active" id="pills-company" role="tabpanel"
+              aria-labelledby="pills-company-tab">
+              <div class="d-md-flex justify-content-between">
+                <div>
+                  <h1>32%</h1>
+                  <p class="fs-16">increase in website booking </p>
+                  <div class="border-tab mb-3"></div>
+                </div>
+                <div>
+                  <h1>220%</h1>
+                  <p class="fs-16">more sales meetings held</p>
+                  <div class="border-tab"></div>
+                </div>
+                <div>
+                  <h1>60%</h1>
+                  <p class="fs-16">increase in partner calls</p>
+                  <div class="border-tab"></div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <button class="text-blue border-0 p-0">Read full customer stories</button>
+                <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                    </path>
+                  </svg></div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card active d-flex gap-4 flex-column justify-content-between bg-white h-100">
-            <div>
-              <h4 class="text-black text-start fw-medium">PREMIUM</h4>
-              <div>
-                <div class="text-start mb-9 fw-normal">
-                  <span>$</span>
-                  <span class="fs-48">10</span>
-                  <span>USD</span>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade show active" id="pills-company" role="tabpanel"
+              aria-labelledby="pills-company-tab">
+              <div class="d-md-flex justify-content-between">
+                <div>
+                  <h1>29%</h1>
+                  <p class="fs-16">increase in website booking </p>
+                  <div class="border-tab mb-3"></div>
                 </div>
-                <p class="text-black text-start mb-4 fs-11">Per user/month if billed annually ($12.50 billed monthly)
-                </p>
+                <div>
+                  <h1>15%</h1>
+                  <p class="fs-16">more sales meetings held</p>
+                  <div class="border-tab"></div>
+                </div>
+                <div>
+                  <h1>30%</h1>
+                  <p class="fs-16">increase in partner calls</p>
+                  <div class="border-tab"></div>
+                </div>
               </div>
-              <p class="text-black text-start">For teams that need to track and visualize multiple projects in
-                several ways, including boards, timelines, calendars, etc.</p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Try for free</span></a>
-              </div>
-              <div>
-                <a href="">Learn more about Premium</a>
+              <div class="d-flex align-items-center">
+                <button class="text-blue border-0 p-0">Read full customer stories</button>
+                <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                    </path>
+                  </svg></div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card d-flex gap-4 flex-column justify-content-between bg-white h-100" id="enterpriseCard">
-            <div>
-              <h4 class="text-black text-start fw-medium">ENTERPRISE</h4>
-              <div class="mb-9">
-                <span class="price-counter">$<span class="fw-normal fs-48">17.50</span>USD</span>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade show active" id="pills-company" role="tabpanel"
+              aria-labelledby="pills-company-tab">
+              <div class="d-md-flex justify-content-between">
+                <div>
+                  <h1>50%</h1>
+                  <p class="fs-16">increase in website booking </p>
+                  <div class="border-tab mb-3"></div>
+                </div>
+                <div>
+                  <h1>40%</h1>
+                  <p class="fs-16">more sales meetings held</p>
+                  <div class="border-tab"></div>
+                </div>
+                <div>
+                  <h1>80%</h1>
+                  <p class="fs-16">increase in partner calls</p>
+                  <div class="border-tab"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="text-blue border-0 p-0">Read full customer stories</button>
+                  <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                      fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                      </path>
+                    </svg></div>
+                </div>
               </div>
-              <p class="text-black text-start mb-4 fs-11">Per user/month - billed annually ($210.00 annual price per
-                user)
-              </p>
-              <p class="text-black text-start mb-3">For organizations that need to connect work across teams with more
-                security and controls.</p>
-              <p class="text-black mb-3"> Est. cost for<span class="user-counter fs-24 text-center">50</span>users</p>
-              <p>
-                <span class="range-container"><input type="range" id="priceRange" min="50" max="100" value="50"></span>
-              </p>
-              <p id="peakMessage">For organizations with more than 5,000 users, please contact sales for pricing </p>
+              <div class="d-flex align-items-center">
+                <button class="text-blue border-0 p-0">Read full customer stories</button>
+                <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                    </path>
+                  </svg></div>
+              </div>
             </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Contact Sales</span></a>
-              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="d-md-flex justify-content-between">
               <div>
-                <a href="">Learn more about Enterprise</a>
+                <h1>5%</h1>
+                <p class="fs-16">increase in website booking </p>
+                <div class="border-tab mb-3"></div>
+                <div>
+                  <h1>25%</h1>
+                  <p class="fs-16">more sales meetings held</p>
+                  <div class="border-tab"></div>
+                </div>
+                <div>
+                  <h1>325%</h1>
+                  <p class="fs-16">increase in partner calls</p>
+                  <div class="border-tab"></div>
+                </div>
               </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <button class="text-blue border-0 p-0">Read full customer stories</button>
+              <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                  </path>
+                </svg></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--Pricing Cards-section End -->
+  <!-- Tab-section-2 end -->
 
-  <!-- Image-Container -->
-  <div class="container pt-0 py-120">
+  <!-- logos-section-start -->
+  <div class="container py-120">
     <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <div>
-          <p class="text-black text-center fs-20">Join over 2,000,000 teams worldwide that are using Trello to get more
-            done.</p>
+      <div class="col-12 col-lg-11">
+        <div class="d-flex justify-content-center mb-4">
+          <button class="border-1 bg-white rounded-5 p-1">
+            <div class="d-flex gap-2 align-items-center"><span
+                class="bg-blue text-white px-2 py-1 rounded-5">New</span>ISO-27001 Certification <svg
+                xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                </path>
+              </svg></div>
+          </button>
         </div>
-        <img src="assests/images/logos-horizontal-visa-coinbase-john-deere-zoom-grand-hyatt-fender.svg" alt="">
+
+        <div class="row justify-content-center">
+          <h2 class="text-center fw-bold mb-3">Build to keep your organization secure</h2>
+        </div>
+      </div>
+      <div class="logo d-flex flex-wrap justify-content-center gap-lg-4 gap-4 mb-4">
+        <img src="assests/images/ISO-27001.png" alt="">
+        <img src="assests/images/pci-dss.png" alt="">
+        <img src="assests/images/GDPR.png" alt="">
+        <img src="assests/images/ISO-27001.png" alt="">
+        <img src="assests/images/pci-dss.png" alt="">
+        <img src="assests/images/ISO-27001.png" alt="">
+      </div>
+      <div class="col-12 col-md-10 col-lg-8">
+        <p class="text-center fs-16">Keep your scheduling data secure with enterprise-grade,
+          admin manegement, security integration, data governance, complaince audits, and privacy protection. </p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center">
+        <button class="text-blue border-0 bg-white">Learn more</button>
+        <div class="text-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+            class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+            </path>
+          </svg></div>
       </div>
     </div>
   </div>
-  <!-- Image-Container End-->
+  <!-- logos-section-end -->
 
-  <!-- Get started with Trello today-Container -->
-  <section class="ford-section ford-section-md">
-    <div class="container py-80 ">
-      <div class="row">
-        <div>
-          <h2 class="text-white text-center fw-medium mb-4">Get started with Trello today</h2>
-          <div class="d-flex flex-wrap mb-4 gap-3 justify-content-center ">
-            <form>
-              <div class="form-group mb-2">
-                <input type="email" class="form-control fw-normal" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="Email">
-              </div>
-            </form>
-            <button class="btn btn-secondary d-flex rounded-2  fw-normal mb-3 border-0 hero-button">Sign up-it's
-              free!</button>
+  <!-- Tab-section-2 start -->
+  <div class="container rounded-5 section-2 py-120">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-12 text-center">
+        <h2 class="text-center text-white fw-bold pb-3">Power up your scheduling</h2>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-9  col-lg-7">
+            <p class="text-center text-white fs-10 pb-3">Get started with world's leading scheduling automation platform
+              in seconds-for free.</p>
           </div>
+        </div>
+        <div class="d-flex gap-3 justify-content-center flex-wrap  mb-3">
+          <button class="btn btn-primary text-white">Sign up for free</button>
+          <button class="rounded-2 btn-success text-white">Get a demo</button>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Get started with Trello today-Container End -->
+  </div>
+  <!-- Tab-section-2 start -->
 
-  <!-- Footer-section -->
-  <section class="footer-section pt-5">
-    <div class="container">
-      <div class="row gap-3">
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="p-4">
-            <div class="footer-logo">
-              <svg aria-label="Atlassian Trello" fill="#ffffff" height="45" role="img" viewBox="0 0 312 105" width="312"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                class="Logo-sc-1anfgcw-0 gguOta">
-                <defs>
-                  <linearGradient id="trello-logo-gradient-white" x1="49.992%" x2="49.992%" y1="100%" y2=".016%">
-                    <stop offset="0%" stop-color="#ffffff" stop-opacity=".5"></stop>
-                    <stop offset="15%" stop-color="#ffffff" stop-opacity=".65"></stop>
-                    <stop offset="30%" stop-color="#ffffff" stop-opacity=".78"></stop>
-                    <stop offset="46%" stop-color="#ffffff" stop-opacity=".88"></stop>
-                    <stop offset="62%" stop-color="#ffffff" stop-opacity=".95"></stop>
-                    <stop offset="80%" stop-color="#ffffff" stop-opacity=".99"></stop>
-                    <stop offset="100%" stop-color="#ffffff"></stop>
-                  </linearGradient>
-                </defs>
-                <path d="M42.6 5.2 42.6 17.3 28.3 17.3 28.3 63 14.5 63 14.5 17.2.2 17.2.2 5.2z"
-                  transform="translate(87 40)"></path>
-                <path
-                  d="M60.2,63 L47.5,63 L47.5,18 L60.2,18 L60.2,26.6 C62.6,20.5 66.5,16.9 73.4,17.4 L73.4,30.7 C64.4,30 60.2,32.2 60.2,39.4 L60.2,63 Z"
-                  transform="translate(87 40)"></path>
-                <path
-                  d="M143,63.4 C134.6,63.4 129.4,59.4 129.4,49.9 L129.4,0.6 L142.2,0.6 L142.2,48.1 C142.2,50.8 144,51.8 146.2,51.8 C146.8,51.8 147.5,51.8 148.1,51.7 L148.1,62.8 C146.4,63.2 144.7,63.4 143,63.4 L143,63.4 Z"
-                  transform="translate(87 40)"></path>
-                <path
-                  d="M169.8,63.4 C161.4,63.4 156.2,59.4 156.2,49.9 L156.2,0.6 L169,0.6 L169,48.1 C169,50.8 170.8,51.8 173,51.8 C173.6,51.8 174.3,51.8 174.9,51.7 L174.9,62.8 C173.2,63.2 171.5,63.4 169.8,63.4 L169.8,63.4 Z"
-                  transform="translate(87 40)"></path>
-                <path
-                  d="M181,40.5 C181,26.6 189,17.1 202.8,17.1 C216.6,17.1 224.4,26.6 224.4,40.5 C224.4,54.4 216.5,64.1 202.8,64.1 C189.1,64.1 181,54.3 181,40.5 Z M193.5,40.5 C193.5,47.3 196.3,52.6 202.8,52.6 C209.3,52.6 211.9,47.2 211.9,40.5 C211.9,33.8 209.1,28.5 202.8,28.5 C196.5,28.5 193.5,33.7 193.5,40.5 Z"
-                  transform="translate(87 40)"></path>
-                <path
-                  d="M90.6,44.6 C94.2,45 97.8,45.2 101.3,45.2 C111.1,45.2 119.3,42.6 119.3,33.1 C119.3,23.9 110.8,17 100.6,17 C86.9,17 78.1,27 78.1,40.8 C78.1,55.2 85.7,63.8 102.8,63.8 C107.9,63.9 112.9,63 117.7,61.2 L117.7,50.4 C113.3,51.8 108.3,53.2 103.3,53.2 C96.5,53.3 91.8,51 90.6,44.6 L90.6,44.6 Z M100.4,26.9 C104,26.9 106.9,29.3 106.9,32.7 C106.9,37 102.3,38.4 97.1,38.4 C94.9,38.4 92.6,38.2 90.4,37.9 C90.6,35.8 91.2,33.8 92.2,31.9 C93.8,28.8 97,26.9 100.4,26.9 Z"
-                  transform="translate(87 40)"></path>
-                <path fill="url(#trello-logo-gradient-white)"
-                  d="M55.3,40.6 L7.8,40.6 C3.7,40.6 0.4,43.9 0.4,48 L0.4,95.6 C0.4,99.7 3.7,103 7.8,103 L55.3,103 C59.4,103 62.7,99.7 62.7,95.6 L62.7,48 C62.7,43.9 59.4,40.6 55.3,40.6 Z M27.2,85.5 C27.2,86.9 26.1,88 24.7,88 L14.3,88 C12.9,88 11.8,86.9 11.8,85.5 L11.8,54.6 C11.8,53.2 12.9,52.1 14.3,52.1 L24.7,52.1 C26.1,52.1 27.2,53.2 27.2,54.6 L27.2,85.5 Z M51.2,71.3 C51.2,72.7 50.1,73.8 48.8,73.8 L38.3,73.8 C36.9,73.8 35.8,72.7 35.8,71.3 L35.8,54.6 C35.8,53.2 36.9,52.1 38.3,52.1 L48.7,52.1 C50.1,52.1 51.2,53.2 51.2,54.6 L51.2,71.3 Z">
-                </path>
-                <g opacity=".7">
-                  <path
-                    d="M98.9,16.7 C98.9,12.7 96.3,10.9 91.5,9.7 C88.5,8.9 87.8,8.3 87.8,7.3 C87.8,6.1 88.9,5.5 90.9,5.5 C93.3,5.6 95.7,6.2 97.9,7.3 L97.9,2.3 C95.8,1.3 93.4,0.8 91.1,0.8 C85.8,0.8 82.9,3.3 82.9,7.4 C82.9,11.3 85.5,13.3 89.9,14.3 C93,15 93.9,15.5 93.9,16.8 C93.9,17.8 93.2,18.6 90.9,18.6 C88.1,18.5 85.3,17.7 82.8,16.3 L82.8,21.6 C85.3,22.8 88,23.5 90.8,23.5 C96.2,23.5 98.9,20.8 98.9,16.7 L98.9,16.7 Z"
-                    transform="translate(94)"></path>
-                  <path
-                    d="M159.3 1.2 159.3 23.2 164 23.2 164 6.4 166 10.8 172.6 23.1 178.5 23.1 178.5 1.1 173.8 1.1 173.8 15.3 172 11.2 166.7 1.1 159.3 1.1z"
-                    transform="translate(94)"></path>
-                  <path d="M129.6 1.2 124.5 1.2 124.5 23.2 129.6 23.2z" transform="translate(94)"></path>
-                  <path d="M43.2 1.2 43.2 23.2 53.7 23.2 55.3 18.4 48.3 18.4 48.3 1.2z" transform="translate(94)">
-                  </path>
-                  <path d="M22.4 1.2 22.4 6 28.1 6 28.1 23.2 33.2 23.2 33.2 6 39.3 6 39.3 1.2z"
-                    transform="translate(94)">
-                  </path>
-                  <path
-                    d="M15,1.2 L8.3,1.2 L0.6,23.2 L6.5,23.2 L7.6,19.5 C8.9,19.9 10.3,20.1 11.7,20.1 C13.1,20.1 14.5,19.9 15.8,19.5 L16.9,23.2 L22.8,23.2 L15,1.2 Z M11.6,15.5 C10.6,15.5 9.7,15.4 8.8,15.1 L11.6,5.5 L14.4,15.1 C13.5,15.4 12.6,15.5 11.6,15.5 Z"
-                    transform="translate(94)"></path>
-                  <path
-                    d="M71.7,1.2 L65,1.2 L57.3,23.2 L63.2,23.2 L64.3,19.5 C65.6,19.9 67,20.1 68.4,20.1 C69.8,20.1 71.2,19.9 72.5,19.5 L73.6,23.2 L79.5,23.2 L71.7,1.2 Z M68.4,15.5 C67.4,15.5 66.5,15.4 65.6,15.1 L68.4,5.5 L71.2,15.1 C70.3,15.4 69.3,15.5 68.4,15.5 Z"
-                    transform="translate(94)"></path>
-                  <path
-                    d="M148,1.2 L141.3,1.2 L133.6,23.2 L139.5,23.2 L140.6,19.5 C141.9,19.9 143.3,20.1 144.7,20.1 C146.1,20.1 147.5,19.9 148.8,19.5 L149.9,23.2 L155.8,23.2 L148,1.2 Z M144.6,15.5 C143.6,15.5 142.7,15.4 141.8,15.1 L144.6,5.5 L147.4,15.1 C146.5,15.4 145.6,15.5 144.6,15.5 Z"
-                    transform="translate(94)"></path>
-                  <path
-                    d="M119.2,16.7 C119.2,12.7 116.6,10.9 111.8,9.7 C108.8,8.9 108.1,8.3 108.1,7.3 C108.1,6.1 109.2,5.5 111.1,5.5 C113.5,5.6 115.9,6.2 118.1,7.3 L118.1,2.3 C115.9,1.3 113.6,0.8 111.2,0.8 C105.9,0.8 103,3.3 103,7.4 C103,11.3 105.6,13.3 110,14.3 C113.1,15 114,15.5 114,16.8 C114,17.8 113.3,18.6 111,18.6 C108.2,18.5 105.4,17.7 102.9,16.3 L102.9,21.6 C105.4,22.8 108.1,23.5 110.9,23.5 C116.6,23.5 119.2,20.8 119.2,16.7 L119.2,16.7 Z"
-                    transform="translate(94)"></path>
-                </g>
+  <!-- card2-section start -->
+  <div class="container py-120">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-lg-6 mb-2">
+        <h2 class="fw-bold">Easy <span class="text-blue fw-bold">ahead</span> <sup class="fs-6">TM</sup></h2>
+        <p class="fs-10">We take the work out to connecting with others so you can accomplish more.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card rounded-4">
+          <div class="card-body  p-4">
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="section-1 text-black px-2 py-1 rounded-5">Featured</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
               </svg>
             </div>
-            <div class="mt-3">
-              <p>Log In</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-2 footer-text border-line-top border-line-bottom">
-          <div class="footer-text">
-            <div>
-              <h4 class="text-white fw-normal">About Trello</h4>
+            <div class="mb-3">
+              <img class="tab-img2 p-2 rounded-5"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1ZW4gcRRRt4yMoCIr4WAw7U3cmqPFtNCqo+6V/8cuI4gO/dP/EN77YkKCZuXcmGiQfouKHRkG/RHwLURAjGsE1GmNAk+zMvb2baFSyJtEoLad7mp0ds9Pd7mR7JLlQ0FNVXXVO1e2699R43ixs8bPBsa7iLymx3e5YVzq2V4l1A4ltIbEdJLbbiR5AwXOrbgv6oK8TXVEUuw1jYCxvLs1x4wJX1UeI7X1inSSxoCclGus9J/ow1cfPPyTgz6ruOpHEhp3oFz0Dnkzsc8yJuWdNYGgkOKZUszuJdXzOCMj04sR+ItGHFo18c9x/IkHVxkLHuikvAtRJiHVTqT5WzkSiKHYNsf2cN3g6yO4AWyoSZZ4okeiveYOmmQrbL4Piu0Qiju2V3MFKIpmXE4mAce5AJbHsPoyIiK3rA6BB96IvJRJZuHqc+v1jL6zyi14ac1W9OgpEfQBcpopj20U1vSodiafHT586hm20j3biK2Bqx9jViPXHstiiOEUJcyzWifx2QTH3MLAAU6nin0ui25KJhOx10rHd670WHI06JG6tnOuzudsB3YA546QRRIps95PY72hPR2SqjDr2l3kjwby4PVwR1ged6DuOdU8PV36PY32bxH8g9ojQRoJ5RfFvJNav2/tnJRL75/eYYGF97Mz2vqHrVe1SV9NbnOhyHN1O7FMS3YztD4UV658okbBCnW6O+qCvLse7GCN2ndjKlcaCaMFs68EweUnWfeX0bxL9yLE9WqiPX9E5+awlAzevJLHHiPXjaK6ZsSQTyab69jm2jcT2vBO7j6R5E45HSIDyE3bq4KodJ3tBcBQKnlGHtrBPTW9u+fwL4Rhi+7K4YTIR0TfzOqEo9UFgb6TS5FlWJwcSe0n881L5a7HWvL6nFws9I6GTTppLU5EIfdrzvAI3L0JwzB28RMWx/lCsNy5sx9jViPX1BfWx4/EMwU81vTvP1N4hvogujzGV12ydn05YRcnZxnKteXFcd/aTzVOc2D1znHuNYk7MHeMoVfUSJ/Yl2lMRCcngdpDtGaroYHs7CBLb447twzhd6FHBWB8gjsCt2+csihWIdS2x/hX3T02kbWsRlde5ml4b516xwfWK4l8eXpmKroDeTxvZo766Au9ijM57q6Ewt9LrWv0OdOLKTKSD1ASxPYe0ojNd6YWVK40Fju3WcA7Rnd2wpCGS2l2cWIPY3iXWGlJtHNtYXVzXIJKHkb1l8W+0Ib0Jj3ixYRKtR3e+1sjiholEkNXmdUJR6gXUtxKJlGq22In9kTdYmtG9bX/7idp9V9hf1pdpCtteJ3ZDKhJTLmaXObaxPtqJMeiWDAT0xfgoHBjRE3Cl71h/y28XFLK7EkteYAPGRCIhe7FPChU7Z6rOPw2EovgwVzug30IhYu4YByRwS11miez44FUKPHHGtB2r+EtCicq6vqffEfyfdT2xjcCt2+ccXL1zAEd8K7AGmYi0+eZ+qLjwf4m2S4hwhdZsnR/KU/bvmPZnKNt3xLr9X5EddVFb9Gco60q8izEwltduuHSo2hDcqIVhGq7MRDpINZHz4Fajc6d6YYOrdw60bkzWkph2w5JMJIugYt0eXeGo4A4KogeuhyQPUbzw1LaT4nHxjDq0Re7ZXEpsd+HdMAhHOxik/H6OaPYgt+NX7HDX7C3ra82e1fpRs8/K+kWz99Ty0OyH3A6lZj9i3v/c/gHxEfqMsxLcTAAAAABJRU5ErkJggg==">
             </div>
             <div>
-              <p class="fs-12">What’s behind the boards</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-          <div class="footer-text">
-            <div>
-              <h4 class="text-white fw-normal">Jobs</h4>
-            </div>
-            <div>
-            <p class="fs-12">Learn about open roles on the Trello team</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-          <div class="footer-text">
-            <div>
-              <h4 class="text-white fw-normal">Apps</h4>
-            </div>
-            <div>
-              <p class="fs-12">Download the Trello App for your Desktop or Mobile devices</p>
-            </div>
-          </div>
-        
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-          <div class="footer-text">
-            <div>
-              <h4 class="text-white fw-normal">Contact us</h4>
-            </div>
-            <div>
-              <p class="fs-12">Need anything? Get in touch and we can</p>
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="border-line w-100 mx-auto"></div>
-
-
-  <section class="footer-section">
-    <div class="container pt-4">
-      <div class="row">
-        <div class="d-flex flex-wrap justify-content-between ">
-          <div class="col-12 col-md-4 col-lg-3">
-            <form class="mb-3 p-2">
-              <img src="assests/images/language logo.svg" alt="">
-              <select class="bg-transparent text-white border-0" aria-label="Select a language"
-                data-testid="language-select">
-                <option value="en" data-uuid="en_language">English</option>
-                <option value="cs" data-uuid="cs_language">Čeština</option>
-                <option value="de" data-uuid="de_language">Deutsch</option>
-                <option value="es" data-uuid="es_language">Español</option>
-                <option value="fr" data-uuid="fr_language">Français</option>
-                <option value="it" data-uuid="it_language">Italiano</option>
-                <option value="hu" data-uuid="hu_language">Magyar</option>
-                <option value="nl" data-uuid="nl_language">Nederlands</option>
-                <option value="nb" data-uuid="nb_language">Norsk (bokmål)</option>
-                <option value="pl" data-uuid="pl_language">Polski</option>
-                <option value="pt-BR" data-uuid="pt-BR_language">Português (Brasil)</option>
-                <option value="fi" data-uuid="fi_language">Suomi</option>
-                <option value="sv" data-uuid="sv_language">Svenska</option>
-                <option value="vi" data-uuid="vi_language">Tiếng Việt</option>
-                <option value="tr" data-uuid="tr_language">Türkçe</option>
-                <option value="ru" data-uuid="ru_language">Русский</option>
-                <option value="uk" data-uuid="uk_language">Українська</option>
-                <option value="th" data-uuid="th_language">ภาษาไทย</option>
-                <option value="zh-Hans" data-uuid="zh-Hans_language">中文 (简体)</option>
-                <option value="zh-Hant" data-uuid="zh-Hant_language">中文 (繁體)</option>
-                <option value="ja" data-uuid="ja_language">日本語</option>
-              </select>
-            </form>
-          </div>
-
-          <div class="col-12 col-lg-6">
-            <nav>
-              <ul class="d-flex flex-wrap justify-content-start gap-2 fs-12 list-unstyled p-2 mb-5">
-                <li> <a href class="text-white text-decoration-none">Privacy Policy</a></li>
-                <li><a href class="text-white text-decoration-none">Terms</a></li>
-                <li><a href class="text-white text-decoration-none">Copyright © 2024 Atlassian</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-12 col-lg-3">
-            <div class="footer-icon d-flex flex-wrap gap-4 mb-5">
-              <a href
-                class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none Instagram"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                </svg></a>
-
-              <a href
-                class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none Facebook"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                </svg></a>
-
-              <a href
-                class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none LinkedIn"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                </svg></a>
-
-              <a href
-                class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none Twitter"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
-                </svg></a>
-
-              <a href
-                class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none Youtube"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                </svg></a>
+              <h4 class="fw-medium">Calendy's Annual Report: The State of scheduling</h4>
+              <p class="fs-10">Discover the lastest data on the future of AI-powered scheduling.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Footer-section End-->
+  </div>
+  <!-- card2-section start -->
+
+  <!--footer starts from here-->
+  <footer class="bg-white">
+    <div class="container mb-5 bottom_border pb-3">
+      <div class="row gap-lg-5">
+        <div class="col-sm-6 col-md-7 col-lg-3">
+          <h4>Product <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="currentColor"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+              </path>
+            </svg></h4>
+          <ul class="footer_ul_amrc list-unstyled">
+            <li class="pb-1">
+              <div class="d-flex gap-2 align-items-center">
+                <a href="">
+                  <span class="fw-medium">Routing</span>
+                </a>
+                <div class="bg-blue fw-medium badge text-white px-2 py-1 fs-7 rounded-5">New
+                </div>
+              </div>
+            </li>
+            <li class="pb-1">
+              <div class="d-flex gap-2 align-items-center">
+                <a href="">
+                  <span> Availability </span>
+                </a>
+                <div class="bg-blue fw-medium badge text-white px-2 py-1 fs-7 rounded-5">Popular
+                </div>
+              </div>
+            </li>
+            <li class="pb-1">
+              <div class="d-flex gap-2 align-items-center">
+                <a href="">
+                  <span> Team Scheduling</span>
+                </a>
+                <div class="bg-blue fw-medium badge text-white px-2 py-1 fs-7 rounded-5">Popular
+                </div>
+              </div>
+            </li>
+            <li class="pb-1">
+              <a href="">Integration</a>
+            </li>
+            <li class="pb-1">
+              <a class=" fs-8 fw-medium" href="">Team and Companies<svg xmlns="http://www.w3.org/2000/svg" width="27"
+                  height="30" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                  </path>
+                </svg></a>
+            </li>
+            <li class="pb-1">
+              <a class="fs-8 fw-medium" href="">Pricing<svg xmlns="http://www.w3.org/2000/svg" width="27" height="30"
+                  fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                  </path>
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <h4>Team</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href="">Sales</a></li>
+            <li class="pb-1"><a href="">Marketing</a></li>
+            <li class="pb-1"><a href="">Customer Success</a></li>
+            <li class="pb-1"><a href="">Recruiting</a></li>
+            <li class="pb-1"><a href="">Information Technology</a></li>
+            <li class="pb-1"><a href="">Revenue Operations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-7 col-lg-2">
+          <h4>industries</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href="">Technology</a></li>
+            <li class="pb-1"><a href="">Finincial Services</a></li>
+            <li class="pb-1"><a href="">Professional Services</a></li>
+            <li class="pb-1"><a href="">Education</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2 mb-md-4 mb-2">
+          <h4>Company</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href=""></i>Customers </a></li>
+            <li class="pb-1"><a href=""></i>About Us</a></li>
+            <li class="pb-1"><a href=""></i>Leaderships</a></li>
+            <div class="d-flex gap-2 align-items-center">
+              <a href=""><span>Careers</span></a>
+              <div class="bg-blue fw-medium badge text-white px-2 py-1 fs-7 rounded-5">We're hiring!
+              </div>
+            </div>
+            </li>
+            <li class="pb-1"><a href="#"></i>Newsroom</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-7 col-lg-3">
+          <h4>Resources</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href="">Blog</a></li>
+            <li class="pb-1"><a href="">Resources Center</a></li>
+            <li class="pb-1"><a href="">Calendy Community</a></li>
+            <li class="pb-1"><a href="">Campare</a></li>
+            <li class="pb-1"><a href="">Become a partner</a></li>
+            <li class="pb-1"><a href="">Developer Tool</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <h4>Downloads</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href="">Calendy for IOS</a></li>
+            <li class="pb-1"><a href="">Calendy for Android</a></li>
+            <li class="pb-1"><a href="">Chrome Extension</a></li>
+            <li class="pb-1"><a href="">Firefox Extension</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <h4>Connect</h4>
+          <ul class="list-unstyled">
+            <li class="pb-1"><a href="">Sign up for free</a></li>
+            <li class="pb-1"><a href="">Talk to Sales</a></li>
+            <li class="pb-1"><a href="">Help Center</a></li>
+            <li class="pb-1"><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-12 col-lg-12">
+        <div class="d-flex-none d-lg-flex align-items-center justify-content-between">
+          <form class="mb-3">
+            <img class="text-black" src="assests/images/language logo.svg" alt="">
+            <select class="bg-transparent text-black border-1" aria-label="Select a language"
+              data-testid="language-select">
+              <option value="en" data-uuid="en_language">English</option>
+              <option value="cs" data-uuid="cs_language">Čeština</option>
+              <option value="de" data-uuid="de_language">Deutsch</option>
+              <option value="es" data-uuid="es_language">Español</option>
+              <option value="fr" data-uuid="fr_language">Français</option>
+              <option value="it" data-uuid="it_language">Italiano</option>
+              <option value="hu" data-uuid="hu_language">Magyar</option>
+              <option value="nl" data-uuid="nl_language">Nederlands</option>
+              <option value="nb" data-uuid="nb_language">Norsk (bokmål)</option>
+              <option value="pl" data-uuid="pl_language">Polski</option>
+              <option value="pt-BR" data-uuid="pt-BR_language">Português (Brasil)</option>
+              <option value="fi" data-uuid="fi_language">Suomi</option>
+              <option value="sv" data-uuid="sv_language">Svenska</option>
+              <option value="vi" data-uuid="vi_language">Tiếng Việt</option>
+              <option value="tr" data-uuid="tr_language">Türkçe</option>
+              <option value="ru" data-uuid="ru_language">Русский</option>
+              <option value="uk" data-uuid="uk_language">Українська</option>
+              <option value="th" data-uuid="th_language">ภาษาไทย</option>
+              <option value="zh-Hans" data-uuid="zh-Hans_language">中文 (简体)</option>
+              <option value="zh-Hant" data-uuid="zh-Hant_language">中文 (繁體)</option>
+              <option value="ja" data-uuid="ja_language">日本語</option>
+            </select>
+          </form>
+          <div class="d-flex">
+            <ul class="list-unstyled">
+              <li class="d-inline"><a class="pe-2" href="">Privacy</a></li>
+              <li class="d-inline"><a class="pe-2" href="">Terms and Conditions</a></li>
+              <li class="d-inline"><a class="pe-2" href="">Status</a></li>
+              <li class="d-inline"><a class="pe-2" href="">Security</a></li>
+            </ul>
+          </div>
+
+          <div class="d-flex">
+            <ul class="list-unstyled">
+              <li class="pe-3 float-start"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                  </svg></a></li>
+              <li class="pe-3 float-start"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                  </svg></a></li>
+              <li class="pe-3 float-start"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                  </svg></a></li>
+              <li class="pe-3 float-start"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                  </svg></a></li>
+              <li class="pe-3 float-start"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end here-->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.js"></script>
-  <script src="script.js" defer></script>
-
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // Your existing JavaScript code
-    function changeSlide(index) {
-      $('.thumbnail').removeClass('active');
-      $('.thumbnail[data-index="' + index + '"]').addClass('active');
-      $('#slick-slider').slick('slickGoTo', index);
+    const buttonContainer = document.querySelector('.button-container');
+    const buttons = buttonContainer.querySelectorAll('.button');
+    const repeatCount = 3;
+    for (let i = 0; i < repeatCount; i++) {
+      buttons.forEach(button => {
+        const clone = button.cloneNode(true);
+        buttonContainer.appendChild(clone);
+      });
     }
 
-    $(document).ready(function () {
-      var slider = $('#slick-slider');
+    const buttonWidth = buttons[0].offsetWidth;
+    const animationDuration = (buttonWidth / 100) * 2 * repeatCount;
 
-      slider.slick({
-        arrows: false,
-        fade: false,
-        // asNavFor: '.thumbnails',
-        vertical: false,
-        // Set vertical to false for horizontal sliding
-      });
+    buttonContainer.style.animation = `move ${animationDuration}s linear infinite`;
+    buttonContainer.style.animationIterationCount = 'infinite';
 
-      slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        // Update the active thumbnail before the slide changes
-        changeSlide(nextSlide);
-      });
-    });
   </script>
 
   <script>
-    const swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      loop: false,
-      autoHeight: false,
-      centeredSlides: false,
-      slidesPerView: 3.5,
+    function showTab(tabIndex) {
+      // Hide all tabs
+      $('.tab-pane').removeClass('active show');
 
+      // Show the selected tab
+      $('#tab' + tabIndex).addClass('active show');
+    }
+  </script>
 
-      // Responsive breakpoints
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 40,
+  <script>
+    const $tabsToDropdown = $(".tabs-to-dropdown");
 
-        },
-        425: {
-          slidesPerView: 1.2,
-          spaceBetween: 40,
-        },
-        767: {
-          slidesPerView: 1.2,
-          spaceBetween: 40,
-        },
-        991: {
-          slidesPerView: 3.3,
-          spaceBetween: 25,
+    function generateDropdownMarkup(container) {
+      const $navWrapper = container.find(".nav-wrapper");
+      const $navPills = container.find(".nav-pills");
+      const firstTextLink = $navPills.find("li:first-child a").text();
+      const $items = $navPills.find("li");
+      const markup = `
+    <div class="dropdown d-md-none">
+      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        ${firstTextLink}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+        ${generateDropdownLinksMarkup($items)}
+      </div>
+    </div>
+  `;
+      $navWrapper.prepend(markup);
+    }
+
+    function generateDropdownLinksMarkup(items) {
+      let markup = "";
+      items.each(function () {
+        const textLink = $(this).find("a").text();
+        markup += `<a class="dropdown-item" href="#">${textLink}</a>`;
+      });
+
+      return markup;
+    }
+
+    function showDropdownHandler(e) {
+      // works also
+      //const $this = $(this);
+      const $this = $(e.target);
+      const $dropdownToggle = $this.find(".dropdown-toggle");
+      const dropdownToggleText = $dropdownToggle.text().trim();
+      const $dropdownMenuLinks = $this.find(".dropdown-menu a");
+      const dNoneClass = "d-none";
+      $dropdownMenuLinks.each(function () {
+        const $this = $(this);
+        if ($this.text() == dropdownToggleText) {
+          $this.addClass(dNoneClass);
+        } else {
+          $this.removeClass(dNoneClass);
         }
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
+      });
+    }
+
+    function clickHandler(e) {
+      e.preventDefault();
+      const $this = $(this);
+      const index = $this.index();
+      const text = $this.text();
+      $this.closest(".dropdown").find(".dropdown-toggle").text(`${text}`);
+      $this
+        .closest($tabsToDropdown)
+        .find(`.nav-pills li:eq(${index}) a`)
+        .tab("show");
+    }
+
+    function shownTabsHandler(e) {
+      // works also
+      //const $this = $(this);
+      const $this = $(e.target);
+      const index = $this.parent().index();
+      const $parent = $this.closest($tabsToDropdown);
+      const $targetDropdownLink = $parent.find(".dropdown-menu a").eq(index);
+      const targetDropdownLinkText = $targetDropdownLink.text();
+      $parent.find(".dropdown-toggle").text(targetDropdownLinkText);
+    }
+
+    $tabsToDropdown.each(function () {
+      const $this = $(this);
+      const $pills = $this.find('a[data-toggle="pill"]');
+
+      generateDropdownMarkup($this);
+
+      const $dropdown = $this.find(".dropdown");
+      const $dropdownLinks = $this.find(".dropdown-menu a");
+
+      $dropdown.on("show.bs.dropdown", showDropdownHandler);
+      $dropdownLinks.on("click", clickHandler);
+      $pills.on("shown.bs.tab", shownTabsHandler);
     });
 
   </script>
-
   <script>
-    // Initialize Swiper
-    var swiperr = new Swiper('.card-section', {
-      slidesPerView: 1,
-      spaceBetween: 60,
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: false,
-      },
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
+    $('button').click(function () {
+      $("article").toggleClass("paused")
     });
   </script>
-
-  <script>
-    const priceCounter = document.querySelector('.price-counter');
-    const userCounter = document.querySelector('.user-counter');
-    const priceRange = document.getElementById('priceRange');
-    const peakMessage = document.getElementById('peakMessage');
-    priceRange.addEventListener('input', updatePrice);
-
-
-    function updatePrice() {
-      const rangeValue = priceRange.value;
-      const price = (17.5 - (rangeValue * 0.1)).toFixed(2);
-      priceCounter.textContent = `$ ${price} USD`;
-
-      const users = rangeValue <= 50 ? 50 - (rangeValue * 50 / 50) : 50 + ((rangeValue - 50) * 4950 / 50);
-      userCounter.textContent = `${users.toFixed(0)} `;
-
-      if (rangeValue == 100) {
-        peakMessage.style.display = 'block';
-      } else {
-        peakMessage.style.display = 'none';
-      }
-    }
-
-    function decreaseRange() {
-      priceRange.value = Math.max(Number(priceRange.value) - 10, 0);
-      updatePrice();
-    }
-
-    function increaseRange() {
-      priceRange.value = Math.min(Number(priceRange.value) + 10, 100);
-      updatePrice();
-    }
-  </script>
-
-
 </body>
 
 </html>
