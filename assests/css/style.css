@@ -478,7 +478,7 @@ iframe {
   }
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   h2 {
@@ -506,7 +506,7 @@ iframe {
  
   .tab-img,
   .tab-img2 {
-    width: 13%;
+    width: 19%;
     background: rgb(240, 243, 248);
   }
   sup {
@@ -528,7 +528,7 @@ iframe {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 3fr);
     grid-gap: 8px;
   }
   .border-tab {
