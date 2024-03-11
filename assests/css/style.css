@@ -420,6 +420,12 @@ iframe {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
   }
+  .top-left {
+    left: -93px;
+}
+.top-right {
+  left: -93px;
+}
 }
 
 @media screen and (max-width: 991.7px) {
