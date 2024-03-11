@@ -529,7 +529,7 @@ iframe {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 13px;
+    grid-gap: 8px;
   }
   .border-tab {
     border: 1px solid blue;
